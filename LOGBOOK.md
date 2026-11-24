@@ -10,6 +10,10 @@ advisor said, the tasks for next week. Add each new meeting at the top.
 Advisor: report F1 and a confusion matrix for every result, keep the stronger model, and understand the code ourselves; ~8k examples is far too few, especially for fine-tuning.
 Tasks: find or build a splicing dataset of 70k–100k+ examples; try other MLP sizes and depths; run on the college GPU server once access is granted; open the repo and logbook.
 
+**16 Nov 2026** — Showed four DNA language models (NT-v2 50M and 100M, DNABERT-1, DNABERT-2) running locally on CPU, with their embedding outputs and how each tokenises the same sequence.
+Advisor defined the task: splice-site prediction — given a DNA sequence, find where the cuts are — as a classifier on top of a frozen DNA model.
+Tasks: find a splicing dataset, build and train the classifier on top of the model, and write the project proposal.
+
 **9 Nov 2026 (date approximate)** — Presented our AlphaFold 2 and ESMFold runs on ubiquitin, done on Google Colab, where the GPU credits ran out within about 15 minutes.
 Advisor: the project is confirmed as DNA, not peptides. Take a small DNA language model that runs on our own PC (about 1B parameters or less, e.g. DNABERT-2) and train a classifier on top of it for splicing: given a DNA sequence, say where it is cut.
 Tasks: find a small DNA language model and run it locally, without Colab or a GPU; email Effi from our college addresses for GPU-cluster access; then add the splicing task on top of the chosen model.
@@ -26,9 +30,11 @@ Tasks: spend the first two weeks learning the basics of DNA, amino acids, protei
 
 ## Notes on the dates
 
-Only the 23 Nov 2026 meeting has a dated recording. The three earlier entries were
-reconstructed from the meeting transcripts (kept on the laptop, not in this repo), and no
-file states their dates, so they are marked approximate. What the files do show:
+Only the 23 Nov 2026 meeting has a dated recording. The 16 Nov 2026 entry was written by
+us from memory; the folders hold no notes or recording of that meeting. The three earlier
+entries were reconstructed from the meeting transcripts (kept on the laptop, not in this
+repo), and no file states their dates, so they are marked approximate. What the files do
+show:
 
 - **Meeting 3 (about 9 Nov):** `04_archive_protein-structure/protein-phase/for-meeting-2026-11-09/`
   was prepared for Monday 9 Nov, the transcript reports that material, and it was saved on 15 Nov.
@@ -36,6 +42,3 @@ file states their dates, so they are marked approximate. What the files do show:
   log), and its transcript was saved on 8 Nov. It ended with "next week, Monday at 11:30".
 - **Meeting 1 (late Oct):** the DNA cheat sheet written for its study task is dated 29 Oct,
   so the meeting was on or before that day.
-
-The folders hold no notes or recording of a meeting on Monday 16 Nov. If one took place,
-it is missing here and should be added.
