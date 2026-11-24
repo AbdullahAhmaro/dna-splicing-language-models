@@ -1,0 +1,155 @@
+=== 03 InstaDeepAI/nucleotide-transformer-v2-50m-multi-species center_tok --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 25 (no val-loss improvement for 20 epochs); restoring epoch 5
+--- NT-v2-50M [center_tok] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.9170   macro-F1 0.9179
+      none   0.845   0.940   0.890    686
+  acceptor   0.956   0.888   0.921    635
+     donor   0.966   0.920   0.943    679
+      none    645     23     18
+  acceptor     67    564      4
+     donor     51      3    625
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.607   hard-negative head 0.830
+  exon_interior    original head 0.847   hard-negative head 0.927
+  intron_interior  original head 0.860   hard-negative head 0.943
+Saved under ['hardneg_heads', 'InstaDeepAI/nucleotide-transformer-v2-50m-multi-species', 'center_tok'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 InstaDeepAI/nucleotide-transformer-v2-50m-multi-species prev_tok --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- NT-v2-50M [prev_tok] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.8995   macro-F1 0.9008
+      none   0.820   0.924   0.869    686
+  acceptor   0.936   0.882   0.908    635
+     donor   0.962   0.891   0.925    679
+      none    634     32     20
+  acceptor     71    560      4
+     donor     68      6    605
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.650   hard-negative head 0.813
+  exon_interior    original head 0.837   hard-negative head 0.900
+  intron_interior  original head 0.870   hard-negative head 0.920
+Saved under ['hardneg_heads', 'InstaDeepAI/nucleotide-transformer-v2-50m-multi-species', 'prev_tok'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 InstaDeepAI/nucleotide-transformer-v2-50m-multi-species center_plus_prev --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- NT-v2-50M [center_plus_prev] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.9140   macro-F1 0.9147
+      none   0.840   0.948   0.890    686
+  acceptor   0.953   0.871   0.910    635
+     donor   0.968   0.920   0.943    679
+      none    650     21     15
+  acceptor     76    553      6
+     donor     48      6    625
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.710   hard-negative head 0.817
+  exon_interior    original head 0.803   hard-negative head 0.907
+  intron_interior  original head 0.887   hard-negative head 0.943
+Saved under ['hardneg_heads', 'InstaDeepAI/nucleotide-transformer-v2-50m-multi-species', 'center_plus_prev'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 InstaDeepAI/nucleotide-transformer-v2-50m-multi-species center_plus_prev_concat --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- NT-v2-50M [center_plus_prev_concat] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.9330   macro-F1 0.9337
+      none   0.866   0.958   0.909    686
+  acceptor   0.971   0.899   0.934    635
+     donor   0.977   0.940   0.958    679
+      none    657     15     14
+  acceptor     63    571      1
+     donor     39      2    638
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.703   hard-negative head 0.877
+  exon_interior    original head 0.877   hard-negative head 0.927
+  intron_interior  original head 0.907   hard-negative head 0.960
+Saved under ['hardneg_heads', 'InstaDeepAI/nucleotide-transformer-v2-50m-multi-species', 'center_plus_prev_concat'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 zhihan1996/DNABERT-2-117M center_tok --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- DNABERT-2 [center_tok] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.8025   macro-F1 0.8025
+      none   0.684   0.923   0.786    686
+  acceptor   0.897   0.674   0.770    635
+     donor   0.910   0.801   0.852    679
+      none    633     26     27
+  acceptor    180    428     27
+     donor    112     23    544
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.733   hard-negative head 0.887
+  exon_interior    original head 0.627   hard-negative head 0.890
+  intron_interior  original head 0.780   hard-negative head 0.897
+Saved under ['hardneg_heads', 'zhihan1996/DNABERT-2-117M', 'center_tok'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 zhihan1996/DNABERT-2-117M prev_tok --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- DNABERT-2 [prev_tok] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.7365   macro-F1 0.7368
+      none   0.613   0.901   0.729    686
+  acceptor   0.852   0.616   0.715    635
+     donor   0.872   0.683   0.766    679
+      none    618     37     31
+  acceptor    207    391     37
+     donor    184     31    464
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.697   hard-negative head 0.880
+  exon_interior    original head 0.430   hard-negative head 0.767
+  intron_interior  original head 0.747   hard-negative head 0.907
+Saved under ['hardneg_heads', 'zhihan1996/DNABERT-2-117M', 'prev_tok'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 zhihan1996/DNABERT-2-117M center_plus_prev --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- DNABERT-2 [center_plus_prev] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.7940   macro-F1 0.7945
+      none   0.669   0.917   0.774    686
+  acceptor   0.911   0.660   0.765    635
+     donor   0.900   0.795   0.844    679
+      none    629     25     32
+  acceptor    188    419     28
+     donor    123     16    540
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.763   hard-negative head 0.930
+  exon_interior    original head 0.500   hard-negative head 0.843
+  intron_interior  original head 0.777   hard-negative head 0.917
+Saved under ['hardneg_heads', 'zhihan1996/DNABERT-2-117M', 'center_plus_prev'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 03 zhihan1996/DNABERT-2-117M center_plus_prev_concat --hardneg
++ 3600 hard negatives (label none) from the training genes of 13_hard_negatives.py: decoy 1200, exon_interior 1200, intron_interior 1200
+  early stop at epoch 22 (no val-loss improvement for 20 epochs); restoring epoch 2
+--- DNABERT-2 [center_plus_prev_concat] + hard negatives + MLP head (test, n=2000) ---
+accuracy 0.8225   macro-F1 0.8232
+      none   0.708   0.923   0.801    686
+  acceptor   0.917   0.713   0.802    635
+     donor   0.913   0.823   0.866    679
+      none    633     27     26
+  acceptor    155    453     27
+     donor    106     14    559
+Held-out hard-negative genes (900 windows), share called 'none':
+  decoy            original head 0.730   hard-negative head 0.893
+  exon_interior    original head 0.637   hard-negative head 0.867
+  intron_interior  original head 0.793   hard-negative head 0.930
+Saved under ['hardneg_heads', 'zhihan1996/DNABERT-2-117M', 'center_plus_prev_concat'] in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json
+=== 07 --hardneg
+
+=== NT-v2-50M: selection split = 800 original rows + 360 hard negatives from 6 genes; selection heads fit on 7200 original rows (+ 3240 hard negatives)
+  center_tok               original all 0.8871  original rows 0.9387  hard negatives called none 0.772
+  center_tok               hardneg  all 0.9181  original rows 0.9275  hard negatives called none 0.897
+  prev_tok                 original all 0.8784  original rows 0.9087  hard negatives called none 0.811
+  prev_tok                 hardneg  all 0.8940  original rows 0.8850  hard negatives called none 0.914
+  center_plus_prev         original all 0.8862  original rows 0.9225  hard negatives called none 0.806
+  center_plus_prev         hardneg  all 0.9009  original rows 0.8925  hard negatives called none 0.919
+  center_plus_prev_concat  original all 0.9026  original rows 0.9463  hard negatives called none 0.806
+  center_plus_prev_concat  hardneg  all 0.9190  original rows 0.9237  hard negatives called none 0.908
+  -> selected on validation: center_plus_prev_concat (all-rows val acc 0.9190)
+  -> final test score (03 --hardneg, head refit on all training rows + hard negatives): accuracy 0.9330
+
+=== DNABERT-2: selection split = 800 original rows + 360 hard negatives from 6 genes; selection heads fit on 7200 original rows (+ 3240 hard negatives)
+  center_tok               original all 0.7845  original rows 0.8125  hard negatives called none 0.722
+  center_tok               hardneg  all 0.8336  original rows 0.8113  hard negatives called none 0.883
+  prev_tok                 original all 0.7414  original rows 0.7738  hard negatives called none 0.669
+  prev_tok                 hardneg  all 0.7741  original rows 0.7350  hard negatives called none 0.861
+  center_plus_prev         original all 0.7698  original rows 0.8063  hard negatives called none 0.689
+  center_plus_prev         hardneg  all 0.8293  original rows 0.7850  hard negatives called none 0.928
+  center_plus_prev_concat  original all 0.7802  original rows 0.8137  hard negatives called none 0.706
+  center_plus_prev_concat  hardneg  all 0.8388  original rows 0.8100  hard negatives called none 0.903
+  -> selected on validation: center_plus_prev_concat (all-rows val acc 0.8388)
+  -> final test score (03 --hardneg, head refit on all training rows + hard negatives): accuracy 0.8225
+
+Saved under 'variant_selection_hardneg' in /home/kodkod/Desktop/FinalProject/dna-phase/results/phase1_results.json

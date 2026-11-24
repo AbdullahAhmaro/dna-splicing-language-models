@@ -1,0 +1,376 @@
+
+MMP9 ENSG00000100985 chr20:46008869-46016561 strand + (GRCh38), canonical ENST00000372330, 13 exons; scanned 9,693 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.7 kb, 13 exons: many splice sites in a compact gene
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+SOD1 ENSG00000142168 chr21:31659617-31668931 strand + (GRCh38), canonical ENST00000270142, 5 exons; scanned 11,315 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), + strand, 9.3 kb, 5 exons; intron 1 has a non-canonical GC donor
+  donors    4: motifs ['GC', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+PCNA ENSG00000132646 chr20:5114953-5127630 strand - (GRCh38), canonical ENST00000379143, 6 exons; scanned 14,678 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 12.7 kb, 6 exons: exercises the reverse-complement path
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+HMGN1 ENSG00000205581 chr21:39342279-39349653 strand - (GRCh38), canonical ENST00000380749, 6 exons; scanned 9,375 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 6.8 kb, 6 exons; stratum 4-10 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+BPIFA1 ENSG00000198183 chr20:33235987-33243311 strand + (GRCh38), canonical ENST00000354297, 9 exons; scanned 9,325 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.3 kb, 9 exons; stratum 4-10 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    8: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 8: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CPXM1 ENSG00000088882 chr20:2794069-2800835 strand - (GRCh38), canonical ENST00000380605, 14 exons; scanned 8,767 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 6.6 kb, 14 exons; stratum 4-10 kb / 13+ exons, seeded pick (one per stratum)
+  donors    13: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 13: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+WFDC2 ENSG00000101443 chr20:45469166-45481533 strand + (GRCh38), canonical ENST00000372676, 4 exons; scanned 14,368 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 11.8 kb, 4 exons; stratum 10-16 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    3: motifs ['GT', 'GT', 'GT']
+  acceptors 3: motifs ['AG', 'AG', 'AG']
+
+CFAP410 ENSG00000160226 chr21:44328943-44339427 strand - (GRCh38), canonical ENST00000339818, 7 exons; scanned 12,485 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 10.4 kb, 7 exons; stratum 10-16 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ERGIC3 ENSG00000125991 chr20:35542022-35557634 strand + (GRCh38), canonical ENST00000348547, 13 exons; scanned 17,613 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 15.6 kb, 13 exons; stratum 10-16 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+YTHDF1 ENSG00000149658 chr20:63195429-63216149 strand - (GRCh38), canonical ENST00000370339, 5 exons; scanned 22,721 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 20.7 kb, 5 exons; stratum 16-25 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    4: motifs ['GT', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+MTG2 ENSG00000101181 chr20:62183005-62203571 strand + (GRCh38), canonical ENST00000370823, 7 exons; scanned 22,567 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 20.5 kb, 7 exons; stratum 16-25 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GC', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+TMPRSS3 ENSG00000160183 chr21:42371840-42396122 strand - (GRCh38), canonical ENST00000644384, 13 exons; scanned 26,283 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 24.2 kb, 13 exons; stratum 16-25 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CDC25B ENSG00000101224 chr20:3786772-3806730 strand + (GRCh38), canonical ENST00000245960, 16 exons; scanned 21,959 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.8 kb, 16 exons; stratum 4-10 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    15: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 15: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ZNF512B ENSG00000196700 chr20:63956704-63969967 strand - (GRCh38), canonical ENST00000369888, 17 exons; scanned 15,264 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 13.2 kb, 17 exons; stratum 10-16 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    16: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 16: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+OGFR ENSG00000060491 chr20:62804178-62814000 strand + (GRCh38), canonical ENST00000290291, 7 exons; scanned 11,823 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.2 kb, 7 exons; stratum 4-10 kb / 7-12 exons, seeded pick (top-up (exon-rich strata))
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+=== NT-v2-50M: original head `center_plus_prev_concat` (chosen on validation); 6 phase(s), tiles of 12000 bases, overlap 1002, score assigned to the token start
+  HMGN1: 6 forward passes in 35.5s
+    p(donor) at true donors [1.0, 1.0, 0.96, 1.0, 0.57]; p(acceptor) at true acceptors [1.0, 0.99, 0.95, 0.92, 0.98]
+  BPIFA1: 6 forward passes in 43.1s
+    p(donor) at true donors [1.0, 1.0, 0.95, 0.8, 0.94, 0.83, 0.88, 0.98]; p(acceptor) at true acceptors [0.56, 0.98, 0.71, 1.0, 0.99, 0.76, 0.63, 0.81]
+  CPXM1: 6 forward passes in 46.9s
+    p(donor) at true donors [1.0, 0.94, 0.98, 0.99, 0.99, 0.93, 0.7, 0.98, 1.0, 1.0, 0.97, 1.0, 0.86]; p(acceptor) at true acceptors [0.75, 0.99, 0.98, 0.99, 0.95, 0.98, 0.95, 0.72, 0.94, 0.89, 0.94, 0.94, 0.94]
+  WFDC2: 12 forward passes in 76.5s
+    p(donor) at true donors [1.0, 0.82, 1.0]; p(acceptor) at true acceptors [0.99, 0.98, 0.99]
+  CFAP410: 12 forward passes in 91.6s
+    p(donor) at true donors [1.0, 0.58, 1.0, 1.0, 0.99, 0.98]; p(acceptor) at true acceptors [0.73, 0.97, 0.91, 0.96, 0.91, 0.98]
+  ERGIC3: 12 forward passes in 85.0s
+    p(donor) at true donors [1.0, 1.0, 0.97, 0.95, 1.0, 0.94, 1.0, 0.73, 1.0, 1.0, 1.0, 1.0]; p(acceptor) at true acceptors [0.93, 0.95, 0.96, 0.85, 0.85, 0.94, 0.95, 0.97, 0.99, 0.97, 0.98, 0.91]
+  YTHDF1: 12 forward passes in 99.8s
+    p(donor) at true donors [1.0, 1.0, 0.99, 1.0]; p(acceptor) at true acceptors [0.94, 0.68, 0.96, 0.95]
+  MTG2: 12 forward passes in 93.7s
+    p(donor) at true donors [1.0, 1.0, 0.21, 1.0, 1.0, 0.98]; p(acceptor) at true acceptors [0.81, 0.89, 0.92, 0.98, 0.99, 0.98]
+  TMPRSS3: 18 forward passes in 36.5s
+    p(donor) at true donors [0.61, 0.98, 0.48, 1.0, 1.0, 0.98, 0.98, 0.93, 0.48, 0.86, 1.0, 1.0]; p(acceptor) at true acceptors [0.48, 0.81, 0.97, 0.73, 0.98, 0.96, 1.0, 0.86, 0.94, 0.65, 0.6, 0.98]
+  CDC25B: 12 forward passes in 55.3s
+    p(donor) at true donors [0.99, 0.99, 0.72, 0.99, 1.0, 0.9, 0.93, 1.0, 0.99, 1.0, 1.0, 0.99, 1.0, 0.97, 1.0]; p(acceptor) at true acceptors [0.98, 0.98, 0.99, 0.99, 0.48, 0.96, 0.87, 0.97, 0.99, 0.97, 1.0, 0.99, 0.97, 0.98, 0.92]
+  ZNF512B: 12 forward passes in 19.5s
+    p(donor) at true donors [0.96, 1.0, 0.98, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.96, 0.97, 0.93]; p(acceptor) at true acceptors [0.91, 0.91, 0.99, 1.0, 0.99, 0.96, 0.9, 1.0, 0.96, 1.0, 0.99, 1.0, 0.87, 0.99, 0.91, 0.99]
+  OGFR: 6 forward passes in 15.5s
+    p(donor) at true donors [1.0, 1.0, 1.0, 0.99, 1.0, 1.0]; p(acceptor) at true acceptors [0.9, 0.99, 0.96, 0.99, 0.97, 0.99]
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at zhihan1996/DNABERT-2-117M and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+=== DNABERT-2: original head `center_plus_prev_concat` (chosen on validation); 1 phase(s), tiles of 2000 bases, overlap 1000, score assigned to the token span
+  HMGN1: 9 forward passes in 4.7s
+    p(donor) at true donors [1.0, 1.0, 0.44, 0.99, 0.99]; p(acceptor) at true acceptors [0.02, 0.94, 0.81, 0.51, 0.93]
+  BPIFA1: 9 forward passes in 5.4s
+    p(donor) at true donors [0.28, 0.1, 0.8, 0.87, 0.09, 0.45, 0.06, 0.79]; p(acceptor) at true acceptors [0.53, 0.1, 0.19, 0.56, 0.87, 0.07, 0.84, 0.34]
+  CPXM1: 8 forward passes in 5.0s
+    p(donor) at true donors [1.0, 1.0, 0.99, 0.65, 0.28, 0.83, 0.95, 0.86, 1.0, 0.9, 0.86, 0.89, 0.19]; p(acceptor) at true acceptors [0.43, 0.25, 0.65, 0.34, 0.04, 0.95, 0.63, 0.06, 0.17, 0.57, 0.15, 0.99, 0.27]
+  WFDC2: 14 forward passes in 7.4s
+    p(donor) at true donors [1.0, 1.0, 1.0]; p(acceptor) at true acceptors [0.87, 0.13, 0.27]
+  CFAP410: 12 forward passes in 6.2s
+    p(donor) at true donors [1.0, 0.98, 0.98, 1.0, 0.97, 0.96]; p(acceptor) at true acceptors [0.92, 0.85, 0.18, 0.68, 0.56, 0.09]
+  ERGIC3: 17 forward passes in 9.6s
+    p(donor) at true donors [0.65, 1.0, 0.27, 0.92, 1.0, 0.95, 0.62, 0.11, 0.92, 0.99, 0.98, 0.98]; p(acceptor) at true acceptors [0.21, 0.69, 0.19, 0.08, 0.89, 0.73, 0.46, 0.1, 0.27, 0.5, 0.12, 0.27]
+  YTHDF1: 22 forward passes in 12.1s
+    p(donor) at true donors [1.0, 1.0, 0.71, 1.0]; p(acceptor) at true acceptors [0.53, 0.68, 0.98, 1.0]
+  MTG2: 22 forward passes in 10.7s
+    p(donor) at true donors [1.0, 0.91, 0.17, 0.89, 0.98, 0.95]; p(acceptor) at true acceptors [0.92, 0.94, 0.98, 0.22, 0.78, 0.77]
+  TMPRSS3: 26 forward passes in 13.1s
+    p(donor) at true donors [0.15, 0.73, 0.15, 0.82, 0.75, 0.96, 0.96, 0.93, 0.44, 0.55, 0.94, 1.0]; p(acceptor) at true acceptors [0.09, 0.73, 0.44, 0.27, 0.94, 0.4, 0.24, 0.05, 0.8, 0.01, 0.55, 0.51]
+  CDC25B: 21 forward passes in 10.8s
+    p(donor) at true donors [0.99, 0.9, 0.95, 0.95, 0.98, 0.1, 0.98, 0.9, 0.33, 0.99, 0.69, 0.99, 0.99, 0.85, 0.91]; p(acceptor) at true acceptors [0.82, 0.44, 0.54, 0.78, 0.42, 0.22, 0.78, 0.11, 0.65, 0.75, 0.93, 0.16, 0.65, 0.49, 0.52]
+  ZNF512B: 15 forward passes in 8.8s
+    p(donor) at true donors [1.0, 0.89, 0.92, 0.94, 0.99, 1.0, 0.95, 0.08, 1.0, 1.0, 0.99, 0.51, 0.99, 0.47, 0.99, 0.05]; p(acceptor) at true acceptors [0.16, 0.08, 0.0, 0.71, 0.36, 0.44, 0.92, 0.78, 0.16, 0.15, 0.42, 0.86, 0.47, 0.97, 0.95, 0.93]
+  OGFR: 11 forward passes in 5.9s
+    p(donor) at true donors [0.91, 0.49, 0.99, 0.83, 0.94, 0.96]; p(acceptor) at true acceptors [0.9, 0.96, 0.89, 0.81, 0.07, 0.03]
+
+Outputs in /home/kodkod/Desktop/FinalProject/dna-phase/data/scan/<GENE>/
+exit 0
+
+MMP9 ENSG00000100985 chr20:46008869-46016561 strand + (GRCh38), canonical ENST00000372330, 13 exons; scanned 9,693 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.7 kb, 13 exons: many splice sites in a compact gene
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+SOD1 ENSG00000142168 chr21:31659617-31668931 strand + (GRCh38), canonical ENST00000270142, 5 exons; scanned 11,315 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), + strand, 9.3 kb, 5 exons; intron 1 has a non-canonical GC donor
+  donors    4: motifs ['GC', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+PCNA ENSG00000132646 chr20:5114953-5127630 strand - (GRCh38), canonical ENST00000379143, 6 exons; scanned 14,678 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 12.7 kb, 6 exons: exercises the reverse-complement path
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+HMGN1 ENSG00000205581 chr21:39342279-39349653 strand - (GRCh38), canonical ENST00000380749, 6 exons; scanned 9,375 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 6.8 kb, 6 exons; stratum 4-10 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+BPIFA1 ENSG00000198183 chr20:33235987-33243311 strand + (GRCh38), canonical ENST00000354297, 9 exons; scanned 9,325 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.3 kb, 9 exons; stratum 4-10 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    8: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 8: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CPXM1 ENSG00000088882 chr20:2794069-2800835 strand - (GRCh38), canonical ENST00000380605, 14 exons; scanned 8,767 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 6.6 kb, 14 exons; stratum 4-10 kb / 13+ exons, seeded pick (one per stratum)
+  donors    13: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 13: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+WFDC2 ENSG00000101443 chr20:45469166-45481533 strand + (GRCh38), canonical ENST00000372676, 4 exons; scanned 14,368 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 11.8 kb, 4 exons; stratum 10-16 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    3: motifs ['GT', 'GT', 'GT']
+  acceptors 3: motifs ['AG', 'AG', 'AG']
+
+CFAP410 ENSG00000160226 chr21:44328943-44339427 strand - (GRCh38), canonical ENST00000339818, 7 exons; scanned 12,485 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 10.4 kb, 7 exons; stratum 10-16 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ERGIC3 ENSG00000125991 chr20:35542022-35557634 strand + (GRCh38), canonical ENST00000348547, 13 exons; scanned 17,613 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 15.6 kb, 13 exons; stratum 10-16 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+YTHDF1 ENSG00000149658 chr20:63195429-63216149 strand - (GRCh38), canonical ENST00000370339, 5 exons; scanned 22,721 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 20.7 kb, 5 exons; stratum 16-25 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    4: motifs ['GT', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+MTG2 ENSG00000101181 chr20:62183005-62203571 strand + (GRCh38), canonical ENST00000370823, 7 exons; scanned 22,567 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 20.5 kb, 7 exons; stratum 16-25 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GC', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+TMPRSS3 ENSG00000160183 chr21:42371840-42396122 strand - (GRCh38), canonical ENST00000644384, 13 exons; scanned 26,283 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 24.2 kb, 13 exons; stratum 16-25 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CDC25B ENSG00000101224 chr20:3786772-3806730 strand + (GRCh38), canonical ENST00000245960, 16 exons; scanned 21,959 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.8 kb, 16 exons; stratum 4-10 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    15: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 15: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ZNF512B ENSG00000196700 chr20:63956704-63969967 strand - (GRCh38), canonical ENST00000369888, 17 exons; scanned 15,264 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 13.2 kb, 17 exons; stratum 10-16 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    16: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 16: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+OGFR ENSG00000060491 chr20:62804178-62814000 strand + (GRCh38), canonical ENST00000290291, 7 exons; scanned 11,823 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.2 kb, 7 exons; stratum 4-10 kb / 7-12 exons, seeded pick (top-up (exon-rich strata))
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+=== NT-v2-50M: original head `center_tok` (explicit); 6 phase(s), tiles of 12000 bases, overlap 1002, score assigned to the token start
+  HMGN1: 6 forward passes in 10.4s
+    p(donor) at true donors [1.0, 1.0, 0.98, 1.0, 0.43]; p(acceptor) at true acceptors [1.0, 0.99, 0.2, 0.25, 0.16]
+  BPIFA1: 6 forward passes in 10.3s
+    p(donor) at true donors [0.99, 1.0, 0.14, 0.15, 0.43, 0.8, 0.78, 0.89]; p(acceptor) at true acceptors [0.24, 0.84, 0.35, 0.81, 0.91, 0.75, 0.2, 0.71]
+  CPXM1: 6 forward passes in 9.3s
+    p(donor) at true donors [1.0, 0.99, 0.96, 0.98, 0.82, 0.91, 0.8, 0.97, 0.98, 1.0, 0.95, 1.0, 0.08]; p(acceptor) at true acceptors [0.78, 0.99, 1.0, 0.91, 0.76, 0.88, 0.85, 0.23, 0.95, 0.49, 0.98, 0.98, 0.93]
+  WFDC2: 12 forward passes in 17.7s
+    p(donor) at true donors [1.0, 0.98, 1.0]; p(acceptor) at true acceptors [0.99, 0.99, 0.95]
+  CFAP410: 12 forward passes in 15.9s
+    p(donor) at true donors [1.0, 0.86, 0.99, 1.0, 0.88, 1.0]; p(acceptor) at true acceptors [0.58, 0.76, 0.68, 0.72, 0.77, 0.97]
+  ERGIC3: 12 forward passes in 21.5s
+    p(donor) at true donors [1.0, 1.0, 0.96, 0.96, 0.92, 0.95, 1.0, 0.41, 1.0, 1.0, 1.0, 0.99]; p(acceptor) at true acceptors [0.96, 0.9, 0.85, 0.33, 0.59, 0.94, 0.87, 0.98, 0.93, 0.93, 0.99, 0.98]
+  YTHDF1: 12 forward passes in 29.6s
+    p(donor) at true donors [1.0, 1.0, 0.99, 1.0]; p(acceptor) at true acceptors [0.72, 0.18, 0.94, 0.74]
+  MTG2: 12 forward passes in 29.5s
+    p(donor) at true donors [1.0, 0.98, 0.01, 1.0, 1.0, 0.97]; p(acceptor) at true acceptors [0.27, 0.39, 0.93, 0.89, 0.99, 1.0]
+  TMPRSS3: 18 forward passes in 33.8s
+    p(donor) at true donors [0.72, 0.99, 0.07, 0.99, 1.0, 0.95, 0.98, 0.35, 0.46, 0.43, 1.0, 0.98]; p(acceptor) at true acceptors [0.03, 0.74, 0.98, 0.65, 0.77, 0.56, 1.0, 0.48, 0.77, 0.92, 0.49, 0.93]
+  CDC25B: 12 forward passes in 28.4s
+    p(donor) at true donors [0.99, 0.99, 0.48, 0.97, 0.99, 0.78, 0.95, 1.0, 0.87, 0.99, 1.0, 1.0, 1.0, 0.95, 1.0]; p(acceptor) at true acceptors [0.99, 0.87, 0.97, 0.99, 0.56, 0.96, 0.98, 0.92, 0.75, 0.95, 1.0, 0.97, 0.95, 0.93, 0.54]
+  ZNF512B: 12 forward passes in 18.5s
+    p(donor) at true donors [0.98, 1.0, 0.92, 0.99, 1.0, 0.99, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.99, 0.93, 0.94]; p(acceptor) at true acceptors [0.98, 0.93, 0.99, 1.0, 0.99, 0.99, 0.9, 1.0, 0.98, 0.99, 0.99, 1.0, 0.98, 0.99, 0.92, 1.0]
+  OGFR: 6 forward passes in 14.6s
+    p(donor) at true donors [1.0, 1.0, 1.0, 0.98, 1.0, 1.0]; p(acceptor) at true acceptors [0.97, 1.0, 0.65, 0.97, 0.62, 1.0]
+'(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: cfe72d74-1d61-4f13-997b-22f2b60bd8e0)')' thrown while requesting HEAD https://huggingface.co/zhihan1996/DNABERT-2-117M/resolve/main/tokenizer_config.json
+Retrying in 1s [Retry 1/5].
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at zhihan1996/DNABERT-2-117M and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+=== DNABERT-2: original head `center_tok` (explicit); 1 phase(s), tiles of 2000 bases, overlap 1000, score assigned to the token span
+  HMGN1: 9 forward passes in 4.9s
+    p(donor) at true donors [1.0, 1.0, 0.89, 0.98, 0.98]; p(acceptor) at true acceptors [0.01, 0.36, 0.66, 0.99, 0.84]
+  BPIFA1: 9 forward passes in 5.6s
+    p(donor) at true donors [0.52, 0.14, 0.5, 0.83, 0.28, 0.81, 0.08, 0.9]; p(acceptor) at true acceptors [0.9, 0.17, 0.09, 0.75, 0.84, 0.23, 0.77, 0.11]
+  CPXM1: 8 forward passes in 4.8s
+    p(donor) at true donors [1.0, 0.98, 0.91, 0.4, 0.77, 0.62, 0.58, 0.52, 1.0, 0.75, 0.51, 0.63, 0.57]; p(acceptor) at true acceptors [0.55, 0.6, 0.61, 0.11, 0.29, 0.8, 0.46, 0.14, 0.16, 0.22, 0.27, 0.91, 0.65]
+  WFDC2: 14 forward passes in 5.9s
+    p(donor) at true donors [0.89, 1.0, 0.98]; p(acceptor) at true acceptors [0.84, 0.01, 0.25]
+  CFAP410: 12 forward passes in 5.0s
+    p(donor) at true donors [1.0, 0.86, 0.7, 1.0, 0.86, 0.81]; p(acceptor) at true acceptors [0.79, 0.69, 0.07, 0.28, 0.46, 0.21]
+  ERGIC3: 17 forward passes in 6.9s
+    p(donor) at true donors [0.93, 1.0, 0.62, 0.8, 1.0, 0.88, 0.85, 0.11, 0.85, 0.98, 0.9, 0.83]; p(acceptor) at true acceptors [0.04, 0.78, 0.54, 0.02, 0.9, 0.51, 0.15, 0.12, 0.27, 0.34, 0.42, 0.56]
+  YTHDF1: 22 forward passes in 8.9s
+    p(donor) at true donors [1.0, 1.0, 0.93, 0.99]; p(acceptor) at true acceptors [0.57, 0.77, 0.23, 0.9]
+  MTG2: 22 forward passes in 9.9s
+    p(donor) at true donors [1.0, 0.76, 0.64, 0.89, 0.87, 0.85]; p(acceptor) at true acceptors [0.78, 0.39, 0.91, 0.11, 0.62, 0.2]
+  TMPRSS3: 26 forward passes in 13.2s
+    p(donor) at true donors [0.43, 0.6, 0.29, 0.91, 0.89, 0.98, 0.92, 0.72, 0.49, 0.5, 0.89, 1.0]; p(acceptor) at true acceptors [0.12, 0.71, 0.11, 0.75, 0.52, 0.29, 0.44, 0.04, 0.2, 0.02, 0.3, 0.47]
+  CDC25B: 21 forward passes in 8.9s
+    p(donor) at true donors [0.95, 0.82, 0.9, 0.91, 0.87, 0.1, 0.96, 0.9, 0.02, 0.93, 0.62, 0.92, 0.92, 0.86, 0.87]; p(acceptor) at true acceptors [0.57, 0.59, 0.31, 0.29, 0.69, 0.2, 0.59, 0.14, 0.82, 0.34, 0.88, 0.33, 0.76, 0.48, 0.66]
+  ZNF512B: 15 forward passes in 6.4s
+    p(donor) at true donors [1.0, 0.76, 0.38, 0.92, 1.0, 1.0, 0.88, 0.33, 1.0, 0.99, 0.99, 0.75, 0.99, 0.94, 0.96, 0.09]; p(acceptor) at true acceptors [0.75, 0.13, 0.12, 0.05, 0.15, 0.65, 0.91, 0.67, 0.17, 0.1, 0.49, 0.88, 0.39, 0.97, 0.83, 0.74]
+  OGFR: 11 forward passes in 4.6s
+    p(donor) at true donors [0.68, 0.58, 0.98, 0.82, 0.65, 0.96]; p(acceptor) at true acceptors [0.45, 0.98, 0.87, 0.47, 0.29, 0.07]
+
+Outputs in /home/kodkod/Desktop/FinalProject/dna-phase/data/scan/<GENE>/
+exit 0
+### DNABERT-2 hard-negative head, long context
+
+MMP9 ENSG00000100985 chr20:46008869-46016561 strand + (GRCh38), canonical ENST00000372330, 13 exons; scanned 9,693 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.7 kb, 13 exons: many splice sites in a compact gene
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+SOD1 ENSG00000142168 chr21:31659617-31668931 strand + (GRCh38), canonical ENST00000270142, 5 exons; scanned 11,315 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), + strand, 9.3 kb, 5 exons; intron 1 has a non-canonical GC donor
+  donors    4: motifs ['GC', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+PCNA ENSG00000132646 chr20:5114953-5127630 strand - (GRCh38), canonical ENST00000379143, 6 exons; scanned 14,678 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 12.7 kb, 6 exons: exercises the reverse-complement path
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+HMGN1 ENSG00000205581 chr21:39342279-39349653 strand - (GRCh38), canonical ENST00000380749, 6 exons; scanned 9,375 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 6.8 kb, 6 exons; stratum 4-10 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    5: motifs ['GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 5: motifs ['AG', 'AG', 'AG', 'AG', 'AG']
+
+BPIFA1 ENSG00000198183 chr20:33235987-33243311 strand + (GRCh38), canonical ENST00000354297, 9 exons; scanned 9,325 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 7.3 kb, 9 exons; stratum 4-10 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    8: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 8: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CPXM1 ENSG00000088882 chr20:2794069-2800835 strand - (GRCh38), canonical ENST00000380605, 14 exons; scanned 8,767 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 6.6 kb, 14 exons; stratum 4-10 kb / 13+ exons, seeded pick (one per stratum)
+  donors    13: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 13: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+WFDC2 ENSG00000101443 chr20:45469166-45481533 strand + (GRCh38), canonical ENST00000372676, 4 exons; scanned 14,368 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 11.8 kb, 4 exons; stratum 10-16 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    3: motifs ['GT', 'GT', 'GT']
+  acceptors 3: motifs ['AG', 'AG', 'AG']
+
+CFAP410 ENSG00000160226 chr21:44328943-44339427 strand - (GRCh38), canonical ENST00000339818, 7 exons; scanned 12,485 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 10.4 kb, 7 exons; stratum 10-16 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ERGIC3 ENSG00000125991 chr20:35542022-35557634 strand + (GRCh38), canonical ENST00000348547, 13 exons; scanned 17,613 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 15.6 kb, 13 exons; stratum 10-16 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+YTHDF1 ENSG00000149658 chr20:63195429-63216149 strand - (GRCh38), canonical ENST00000370339, 5 exons; scanned 22,721 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 20.7 kb, 5 exons; stratum 16-25 kb / 4-6 exons, seeded pick (one per stratum)
+  donors    4: motifs ['GT', 'GT', 'GT', 'GT']
+  acceptors 4: motifs ['AG', 'AG', 'AG', 'AG']
+
+MTG2 ENSG00000101181 chr20:62183005-62203571 strand + (GRCh38), canonical ENST00000370823, 7 exons; scanned 22,567 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 20.5 kb, 7 exons; stratum 16-25 kb / 7-12 exons, seeded pick (one per stratum)
+  donors    6: motifs ['GT', 'GT', 'GC', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+TMPRSS3 ENSG00000160183 chr21:42371840-42396122 strand - (GRCh38), canonical ENST00000644384, 13 exons; scanned 26,283 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr21 (held-out test chromosome), - strand, 24.2 kb, 13 exons; stratum 16-25 kb / 13+ exons, seeded pick (one per stratum)
+  donors    12: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 12: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+CDC25B ENSG00000101224 chr20:3786772-3806730 strand + (GRCh38), canonical ENST00000245960, 16 exons; scanned 21,959 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.8 kb, 16 exons; stratum 4-10 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    15: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 15: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+ZNF512B ENSG00000196700 chr20:63956704-63969967 strand - (GRCh38), canonical ENST00000369888, 17 exons; scanned 15,264 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), - strand, 13.2 kb, 17 exons; stratum 10-16 kb / 13+ exons, seeded pick (top-up (exon-rich strata))
+  donors    16: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 16: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+
+OGFR ENSG00000060491 chr20:62804178-62814000 strand + (GRCh38), canonical ENST00000290291, 7 exons; scanned 11,823 bases (gene + 1000 flank each side, transcript orientation)
+  why: chr20 (held-out test chromosome), + strand, 9.2 kb, 7 exons; stratum 4-10 kb / 7-12 exons, seeded pick (top-up (exon-rich strata))
+  donors    6: motifs ['GT', 'GT', 'GT', 'GT', 'GT', 'GT']
+  acceptors 6: motifs ['AG', 'AG', 'AG', 'AG', 'AG', 'AG']
+  warnings.warn(
+Some weights of BertModel were not initialized from the model checkpoint at zhihan1996/DNABERT-2-117M and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+=== DNABERT-2: hardneg head `center_plus_prev_concat` (chosen on validation); 1 phase(s), tiles of 2000 bases, overlap 1000, score assigned to the token span
+  HMGN1: 9 forward passes in 3.9s
+    p(donor) at true donors [0.99, 1.0, 0.64, 0.98, 0.96]; p(acceptor) at true acceptors [0.02, 0.94, 0.57, 0.91, 0.94]
+  BPIFA1: 9 forward passes in 3.8s
+    p(donor) at true donors [0.26, 0.01, 0.19, 0.25, 0.15, 0.06, 0.25, 0.43]; p(acceptor) at true acceptors [0.18, 0.0, 0.06, 0.06, 0.49, 0.05, 0.84, 0.54]
+  CPXM1: 8 forward passes in 4.9s
+    p(donor) at true donors [1.0, 0.94, 0.99, 0.1, 0.04, 0.52, 0.56, 0.62, 0.99, 0.63, 0.24, 0.78, 0.1]; p(acceptor) at true acceptors [0.15, 0.18, 0.03, 0.03, 0.0, 0.34, 0.15, 0.05, 0.06, 0.68, 0.11, 0.96, 0.8]
+  WFDC2: 14 forward passes in 6.4s
+    p(donor) at true donors [0.98, 1.0, 0.96]; p(acceptor) at true acceptors [0.76, 0.11, 0.03]
+  CFAP410: 12 forward passes in 5.1s
+    p(donor) at true donors [1.0, 0.86, 0.98, 0.98, 0.81, 0.91]; p(acceptor) at true acceptors [0.94, 0.91, 0.11, 0.54, 0.73, 0.02]
+  ERGIC3: 17 forward passes in 6.9s
+    p(donor) at true donors [0.83, 0.99, 0.18, 0.81, 0.98, 0.7, 0.29, 0.04, 0.8, 0.77, 0.91, 0.93]; p(acceptor) at true acceptors [0.09, 0.28, 0.38, 0.25, 0.98, 0.87, 0.79, 0.1, 0.21, 0.07, 0.04, 0.26]
+  YTHDF1: 22 forward passes in 8.9s
+    p(donor) at true donors [0.95, 0.98, 0.44, 0.92]; p(acceptor) at true acceptors [0.21, 0.89, 0.61, 1.0]
+  MTG2: 22 forward passes in 8.7s
+    p(donor) at true donors [0.99, 0.59, 0.04, 0.87, 0.42, 0.9]; p(acceptor) at true acceptors [0.63, 0.72, 0.76, 0.65, 0.84, 0.53]
+  TMPRSS3: 26 forward passes in 11.2s
+    p(donor) at true donors [0.03, 0.62, 0.05, 0.7, 0.72, 0.94, 0.93, 0.73, 0.06, 0.26, 0.95, 0.99]; p(acceptor) at true acceptors [0.04, 0.57, 0.67, 0.04, 0.79, 0.65, 0.05, 0.02, 0.63, 0.06, 0.14, 0.87]
+  CDC25B: 21 forward passes in 8.6s
+    p(donor) at true donors [0.79, 0.9, 0.74, 0.39, 0.44, 0.0, 0.68, 0.77, 0.22, 1.0, 0.41, 0.29, 0.99, 0.65, 0.24]; p(acceptor) at true acceptors [0.28, 0.27, 0.47, 0.82, 0.37, 0.13, 0.32, 0.18, 0.95, 0.73, 0.7, 0.12, 0.26, 0.04, 0.25]
+  ZNF512B: 15 forward passes in 6.5s
+    p(donor) at true donors [0.99, 0.67, 0.93, 0.79, 0.94, 0.96, 0.72, 0.23, 1.0, 0.98, 0.79, 0.11, 0.6, 0.26, 0.57, 0.02]; p(acceptor) at true acceptors [0.23, 0.09, 0.03, 0.28, 0.06, 0.26, 0.4, 0.52, 0.02, 0.09, 0.14, 0.68, 0.28, 0.93, 0.82, 0.93]
+  OGFR: 11 forward passes in 4.6s
+    p(donor) at true donors [0.46, 0.75, 0.98, 0.7, 0.75, 0.67]; p(acceptor) at true acceptors [0.79, 0.91, 0.49, 0.71, 0.63, 0.28]
+
+Outputs in /home/kodkod/Desktop/FinalProject/dna-phase/data/scan/<GENE>/
+exit 0

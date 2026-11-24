@@ -1,0 +1,549 @@
+{
+  "n_test_windows": 2000,
+  "rule_offsets": {
+    "GT": 301,
+    "AC": 298,
+    "AG": 298,
+    "CT": 301
+  },
+  "models": {
+    "NT-v2-50M": {
+      "variant": "center_plus_prev_concat"
+    },
+    "DNABERT-2": {
+      "variant": "center_plus_prev_concat"
+    }
+  },
+  "groups": [
+    {
+      "group": "Donor sites, canonical (GT@301 or AC@298)",
+      "n": 666,
+      "motif rule": {
+        "k": 666,
+        "n": 666,
+        "rate": 1.0,
+        "ci95": [
+          0.9943,
+          1.0
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 651,
+        "n": 666,
+        "rate": 0.9775,
+        "ci95": [
+          0.9632,
+          0.9863
+        ]
+      },
+      "DNABERT-2": {
+        "k": 588,
+        "n": 666,
+        "rate": 0.8829,
+        "ci95": [
+          0.8562,
+          0.9051
+        ]
+      }
+    },
+    {
+      "group": "Donor sites, non-canonical (neither motif)",
+      "n": 13,
+      "motif rule": {
+        "k": 0,
+        "n": 13,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.2281
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 9,
+        "n": 13,
+        "rate": 0.6923,
+        "ci95": [
+          0.4237,
+          0.8732
+        ]
+      },
+      "DNABERT-2": {
+        "k": 8,
+        "n": 13,
+        "rate": 0.6154,
+        "ci95": [
+          0.3552,
+          0.8229
+        ]
+      }
+    },
+    {
+      "group": "Acceptor sites, canonical (AG@298 or CT@301)",
+      "n": 635,
+      "motif rule": {
+        "k": 609,
+        "n": 635,
+        "rate": 0.9591,
+        "ci95": [
+          0.9407,
+          0.9719
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 605,
+        "n": 635,
+        "rate": 0.9528,
+        "ci95": [
+          0.9334,
+          0.9667
+        ]
+      },
+      "DNABERT-2": {
+        "k": 498,
+        "n": 635,
+        "rate": 0.7843,
+        "ci95": [
+          0.7506,
+          0.8145
+        ]
+      }
+    },
+    {
+      "group": "Acceptor sites, non-canonical (neither motif)",
+      "n": 0,
+      "motif rule": null,
+      "NT-v2-50M": null,
+      "DNABERT-2": null
+    },
+    {
+      "group": "All splice sites, canonical",
+      "n": 1301,
+      "motif rule": {
+        "k": 1275,
+        "n": 1301,
+        "rate": 0.98,
+        "ci95": [
+          0.9709,
+          0.9863
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 1256,
+        "n": 1301,
+        "rate": 0.9654,
+        "ci95": [
+          0.954,
+          0.9741
+        ]
+      },
+      "DNABERT-2": {
+        "k": 1086,
+        "n": 1301,
+        "rate": 0.8347,
+        "ci95": [
+          0.8136,
+          0.8539
+        ]
+      }
+    },
+    {
+      "group": "All splice sites, non-canonical",
+      "n": 13,
+      "motif rule": {
+        "k": 0,
+        "n": 13,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.2281
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 9,
+        "n": 13,
+        "rate": 0.6923,
+        "ci95": [
+          0.4237,
+          0.8732
+        ]
+      },
+      "DNABERT-2": {
+        "k": 8,
+        "n": 13,
+        "rate": 0.6154,
+        "ci95": [
+          0.3552,
+          0.8229
+        ]
+      }
+    },
+    {
+      "group": "Non-sites with a decoy motif at those offsets",
+      "n": 184,
+      "motif rule": {
+        "k": 0,
+        "n": 184,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0205
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 131,
+        "n": 184,
+        "rate": 0.712,
+        "ci95": [
+          0.6427,
+          0.7725
+        ]
+      },
+      "DNABERT-2": {
+        "k": 150,
+        "n": 184,
+        "rate": 0.8152,
+        "ci95": [
+          0.7529,
+          0.8646
+        ]
+      }
+    },
+    {
+      "group": "Non-sites with no motif at those offsets",
+      "n": 502,
+      "motif rule": {
+        "k": 502,
+        "n": 502,
+        "rate": 1.0,
+        "ci95": [
+          0.9924,
+          1.0
+        ]
+      },
+      "NT-v2-50M": {
+        "k": 485,
+        "n": 502,
+        "rate": 0.9661,
+        "ci95": [
+          0.9464,
+          0.9788
+        ]
+      },
+      "DNABERT-2": {
+        "k": 409,
+        "n": 502,
+        "rate": 0.8147,
+        "ci95": [
+          0.7784,
+          0.8463
+        ]
+      }
+    }
+  ],
+  "non_canonical_kinds": {
+    "GC donor (+ strand, GC@301)": 6,
+    "GC donor (\u2212 strand, GC@298)": 6,
+    "other": 1
+  },
+  "non_canonical_rows": [
+    293,
+    748,
+    958,
+    1340,
+    1826,
+    1912,
+    1978,
+    2169,
+    2202,
+    2412,
+    2727,
+    2728,
+    2848
+  ],
+  "motif_location_vs_centre_token": {
+    "NT-v2-50M": {
+      "inside the centre token": {
+        "n": 624,
+        "donors": 346,
+        "acceptors": 278,
+        "motif_rule": {
+          "k": 611,
+          "n": 624,
+          "rate": 0.9792,
+          "ci95": [
+            0.9647,
+            0.9878
+          ]
+        },
+        "model": {
+          "k": 603,
+          "n": 624,
+          "rate": 0.9663,
+          "ci95": [
+            0.9491,
+            0.9779
+          ]
+        }
+      },
+      "entirely in a neighbouring token": {
+        "n": 593,
+        "donors": 288,
+        "acceptors": 305,
+        "motif_rule": {
+          "k": 580,
+          "n": 593,
+          "rate": 0.9781,
+          "ci95": [
+            0.9629,
+            0.9871
+          ]
+        },
+        "model": {
+          "k": 572,
+          "n": 593,
+          "rate": 0.9646,
+          "ci95": [
+            0.9465,
+            0.9767
+          ]
+        }
+      },
+      "both orientations present": {
+        "n": 84,
+        "donors": 32,
+        "acceptors": 52,
+        "motif_rule": {
+          "k": 84,
+          "n": 84,
+          "rate": 1.0,
+          "ci95": [
+            0.9563,
+            1.0
+          ]
+        },
+        "model": {
+          "k": 81,
+          "n": 84,
+          "rate": 0.9643,
+          "ci95": [
+            0.9002,
+            0.9878
+          ]
+        }
+      }
+    },
+    "DNABERT-2": {
+      "inside the centre token": {
+        "n": 550,
+        "donors": 169,
+        "acceptors": 381,
+        "motif_rule": {
+          "k": 530,
+          "n": 550,
+          "rate": 0.9636,
+          "ci95": [
+            0.9445,
+            0.9763
+          ]
+        },
+        "model": {
+          "k": 449,
+          "n": 550,
+          "rate": 0.8164,
+          "ci95": [
+            0.7818,
+            0.8465
+          ]
+        }
+      },
+      "split across the centre token's edge": {
+        "n": 550,
+        "donors": 394,
+        "acceptors": 156,
+        "motif_rule": {
+          "k": 547,
+          "n": 550,
+          "rate": 0.9945,
+          "ci95": [
+            0.9841,
+            0.9981
+          ]
+        },
+        "model": {
+          "k": 483,
+          "n": 550,
+          "rate": 0.8782,
+          "ci95": [
+            0.8482,
+            0.9029
+          ]
+        }
+      },
+      "entirely in a neighbouring token": {
+        "n": 117,
+        "donors": 71,
+        "acceptors": 46,
+        "motif_rule": {
+          "k": 114,
+          "n": 117,
+          "rate": 0.9744,
+          "ci95": [
+            0.9273,
+            0.9912
+          ]
+        },
+        "model": {
+          "k": 91,
+          "n": 117,
+          "rate": 0.7778,
+          "ci95": [
+            0.6943,
+            0.8436
+          ]
+        }
+      },
+      "both orientations present": {
+        "n": 84,
+        "donors": 32,
+        "acceptors": 52,
+        "motif_rule": {
+          "k": 84,
+          "n": 84,
+          "rate": 1.0,
+          "ci95": [
+            0.9563,
+            1.0
+          ]
+        },
+        "model": {
+          "k": 63,
+          "n": 84,
+          "rate": 0.75,
+          "ci95": [
+            0.6479,
+            0.8303
+          ]
+        }
+      }
+    }
+  },
+  "composition_control": {
+    "composition_auc_decoys_vs_canonical": 0.6648,
+    "models": {
+      "NT-v2-50M": {
+        "canonical_kept": 0.9654,
+        "model_rejects": 0.712,
+        "composition_rejects_at_same_keep": 0.0435
+      },
+      "DNABERT-2": {
+        "canonical_kept": 0.8347,
+        "model_rejects": 0.8152,
+        "composition_rejects_at_same_keep": 0.3207
+      }
+    }
+  },
+  "acceptor_token_hypothesis": {
+    "NT-v2-50M": {
+      "donor, + strand: GT@301": {
+        "n": 346,
+        "center_tok": 0.9855,
+        "prev_tok": 0.9422,
+        "center_plus_prev": 0.9653,
+        "center_plus_prev_concat": 0.9769
+      },
+      "donor, \u2212 strand: AC@298": {
+        "n": 288,
+        "center_tok": 0.9549,
+        "prev_tok": 0.9618,
+        "center_plus_prev": 0.9618,
+        "center_plus_prev_concat": 0.9757
+      },
+      "acceptor, + strand: AG@298": {
+        "n": 305,
+        "center_tok": 0.9541,
+        "prev_tok": 0.9475,
+        "center_plus_prev": 0.9344,
+        "center_plus_prev_concat": 0.9541
+      },
+      "acceptor, \u2212 strand: CT@301": {
+        "n": 278,
+        "center_tok": 0.9281,
+        "prev_tok": 0.9317,
+        "center_plus_prev": 0.9137,
+        "center_plus_prev_concat": 0.9532
+      },
+      "all acceptors": {
+        "n": 635,
+        "center_tok": 0.9433,
+        "prev_tok": 0.9402,
+        "center_plus_prev": 0.9244,
+        "center_plus_prev_concat": 0.9528
+      },
+      "all donors": {
+        "n": 679,
+        "center_tok": 0.9676,
+        "prev_tok": 0.9485,
+        "center_plus_prev": 0.9617,
+        "center_plus_prev_concat": 0.972
+      },
+      "non-sites (none)": {
+        "n": 686,
+        "center_tok": 0.8644,
+        "prev_tok": 0.8805,
+        "center_plus_prev": 0.8732,
+        "center_plus_prev_concat": 0.898
+      }
+    },
+    "DNABERT-2": {
+      "donor, + strand: GT@301": {
+        "n": 346,
+        "center_tok": 0.8497,
+        "prev_tok": 0.7139,
+        "center_plus_prev": 0.8353,
+        "center_plus_prev_concat": 0.8671
+      },
+      "donor, \u2212 strand: AC@298": {
+        "n": 288,
+        "center_tok": 0.8819,
+        "prev_tok": 0.8681,
+        "center_plus_prev": 0.8576,
+        "center_plus_prev_concat": 0.8993
+      },
+      "acceptor, + strand: AG@298": {
+        "n": 305,
+        "center_tok": 0.7607,
+        "prev_tok": 0.8033,
+        "center_plus_prev": 0.8,
+        "center_plus_prev_concat": 0.8197
+      },
+      "acceptor, \u2212 strand: CT@301": {
+        "n": 278,
+        "center_tok": 0.7878,
+        "prev_tok": 0.6906,
+        "center_plus_prev": 0.741,
+        "center_plus_prev_concat": 0.7698
+      },
+      "all acceptors": {
+        "n": 635,
+        "center_tok": 0.7622,
+        "prev_tok": 0.7417,
+        "center_plus_prev": 0.7622,
+        "center_plus_prev_concat": 0.7843
+      },
+      "all donors": {
+        "n": 679,
+        "center_tok": 0.8616,
+        "prev_tok": 0.7835,
+        "center_plus_prev": 0.8439,
+        "center_plus_prev_concat": 0.8778
+      },
+      "non-sites (none)": {
+        "n": 686,
+        "center_tok": 0.8367,
+        "prev_tok": 0.7332,
+        "center_plus_prev": 0.8076,
+        "center_plus_prev_concat": 0.8149
+      }
+    }
+  }
+}

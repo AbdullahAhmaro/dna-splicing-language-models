@@ -1,0 +1,176 @@
+{
+  "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species": {
+    "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+    "short_name": "NT-v2-50M",
+    "loaded_via": "AutoModelForMaskedLM",
+    "embedding_dim": 512,
+    "n_train": 8000,
+    "n_test": 2000,
+    "tokens_per_sequence": {
+      "mean": 101.0,
+      "median": 101.0,
+      "min": 101,
+      "max": 101,
+      "note": "non-padding tokens incl. special tokens (CLS/SEP), 600-nt input"
+    },
+    "max_length": 2048,
+    "n_truncated": 0,
+    "seconds_per_sequence": 0.05286,
+    "sequences_per_second": 18.92,
+    "embed_compute_seconds": 528.6,
+    "model_load_seconds": 1.1,
+    "wall_seconds_this_run": 528.9,
+    "n_embedded_this_run": 10000,
+    "n_resumed_from_checkpoint": 0,
+    "batch_size": 16,
+    "torch_threads": 12,
+    "device": "cpu",
+    "finished_utc": "2026-11-19T12:29:13+00:00"
+  },
+  "zhihan1996/DNABERT-2-117M": {
+    "model": "zhihan1996/DNABERT-2-117M",
+    "short_name": "DNABERT-2",
+    "loaded_via": "AutoModel",
+    "embedding_dim": 768,
+    "n_train": 8000,
+    "n_test": 2000,
+    "tokens_per_sequence": {
+      "mean": 120.07,
+      "median": 120.0,
+      "min": 95,
+      "max": 140,
+      "note": "non-padding tokens incl. special tokens (CLS/SEP), 600-nt input"
+    },
+    "max_length": 512,
+    "n_truncated": 0,
+    "seconds_per_sequence": 0.15349,
+    "sequences_per_second": 6.51,
+    "embed_compute_seconds": 1534.9,
+    "model_load_seconds": 1.4,
+    "wall_seconds_this_run": 1535.9,
+    "n_embedded_this_run": 10000,
+    "n_resumed_from_checkpoint": 0,
+    "batch_size": 16,
+    "torch_threads": 12,
+    "device": "cpu",
+    "finished_utc": "2026-11-19T12:55:43+00:00"
+  },
+  "center_pooling": {
+    "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species": {
+      "model": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+      "short_name": "NT-v2-50M",
+      "token_to_base": "reconstructed from convert_ids_to_tokens lengths (slow tokenizer)",
+      "tokens_pooled_per_sequence": {
+        "full_mean": {
+          "mean": 101.0,
+          "min": 101,
+          "max": 101
+        },
+        "center_tok": {
+          "mean": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "center_w10": {
+          "mean": 4.0,
+          "min": 4,
+          "max": 4
+        },
+        "center_w25": {
+          "mean": 10.0,
+          "min": 10,
+          "max": 10
+        },
+        "center_w50": {
+          "mean": 18.0,
+          "min": 18,
+          "max": 18
+        }
+      },
+      "raw_center_tokens": {
+        "file": "data/emb/InstaDeepAI__nucleotide-transformer-v2-50m-multi-species/center_tokens.npy",
+        "shape": [
+          210000,
+          512
+        ],
+        "dtype": "float16",
+        "tokens_per_sequence_mean": 21.0,
+        "bytes": 215040128
+      },
+      "full_mean_check_vs_02": {
+        "train": {
+          "max_abs_diff_vs_02": 4.291534423828125e-06,
+          "labels_equal": true
+        },
+        "test": {
+          "max_abs_diff_vs_02": 4.291534423828125e-06,
+          "labels_equal": true
+        }
+      },
+      "seconds_per_sequence": 0.0439,
+      "embed_compute_seconds": 439.0,
+      "wall_seconds_this_run": 440.0,
+      "n_embedded": 10000,
+      "n_embedded_this_run": 10000,
+      "finished_utc": "2026-11-19T14:13:25+00:00"
+    },
+    "zhihan1996/DNABERT-2-117M": {
+      "model": "zhihan1996/DNABERT-2-117M",
+      "short_name": "DNABERT-2",
+      "token_to_base": "offset_mapping (fast tokenizer)",
+      "tokens_pooled_per_sequence": {
+        "full_mean": {
+          "mean": 120.07,
+          "min": 95,
+          "max": 140
+        },
+        "center_tok": {
+          "mean": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "center_w10": {
+          "mean": 4.95,
+          "min": 2,
+          "max": 7
+        },
+        "center_w25": {
+          "mean": 10.82,
+          "min": 6,
+          "max": 14
+        },
+        "center_w50": {
+          "mean": 20.64,
+          "min": 13,
+          "max": 26
+        }
+      },
+      "raw_center_tokens": {
+        "file": "data/emb/zhihan1996__DNABERT-2-117M/center_tokens.npy",
+        "shape": [
+          245732,
+          768
+        ],
+        "dtype": "float16",
+        "tokens_per_sequence_mean": 24.57,
+        "bytes": 377444480
+      },
+      "full_mean_check_vs_02": {
+        "train": {
+          "max_abs_diff_vs_02": 1.1920928955078125e-06,
+          "labels_equal": true
+        },
+        "test": {
+          "max_abs_diff_vs_02": 1.430511474609375e-06,
+          "labels_equal": true
+        }
+      },
+      "seconds_per_sequence": 0.11854,
+      "embed_compute_seconds": 1185.4,
+      "wall_seconds_this_run": 1187.6,
+      "n_embedded": 10000,
+      "n_embedded_this_run": 10000,
+      "finished_utc": "2026-11-19T14:35:16+00:00"
+    }
+  }
+}

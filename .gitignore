@@ -1,0 +1,80 @@
+# What stays out of the repo, and why. See "What is not in this repo" in README.md.
+# Rule of thumb: code, notebooks, reports and figures go in; anything large, private
+# or rebuilt by the pipeline stays on the laptop.
+
+# --- Python virtual environments (rebuilt by scripts/setup_local_env.sh) ---
+dna-venv/
+*-venv/
+.venv/
+venv/
+env/
+**/pyvenv.cfg
+
+# --- Python / Jupyter by-products ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- Model weights and saved tensors ---
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.onnx
+
+# --- Pipeline data: datasets, embedding caches, gene scans (about 2.3 GB) ---
+# Everything in data/ is downloaded or recomputed by scripts/run_all.sh, except the
+# fine-tuned scan tracks, which come from kaggle/finetune_scan_genes.ipynb.
+02_dna-splicing-pipeline/data/
+*.npy
+*.npz
+*.arrow
+*.parquet
+
+# --- Hugging Face, pip and other caches ---
+.cache/
+**/huggingface/
+hf_cache/
+.hf_cache/
+pip-cache/
+.pip/
+wandb/
+
+# --- Audio ---
+*.mp3
+*.wav
+*.m4a
+*.ogg
+*.opus
+*.flac
+
+# --- Meeting recordings and transcripts (LOGBOOK.md is the shareable record) ---
+**/meetings/
+05_meeting-*_recording-transcript/*
+!05_meeting-*_recording-transcript/scripts/
+*transcript*.md
+*recording*.md
+
+# --- Email drafts ---
+email_to_*.md
+*email_draft*
+*.eml
+
+# --- Credentials: never commit these ---
+.env
+.env.*
+kaggle.json
+*.pem
+*.key
+*token*.txt
+.netrc
+
+# --- Editor / OS noise ---
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+.claude/

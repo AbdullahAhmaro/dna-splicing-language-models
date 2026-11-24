@@ -1,0 +1,1241 @@
+{
+  "chromosomes": {
+    "dataset_train": [
+      "1",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "X",
+      "Y"
+    ],
+    "dataset_test": [
+      "20",
+      "21"
+    ],
+    "used_for_mining": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "X"
+    ],
+    "note": "chr22 is in neither dataset split; chrY skipped"
+  },
+  "rule": {
+    "regions": 60,
+    "region_bases": 5000000,
+    "genes": 75,
+    "holdout_genes": 15,
+    "per_gene_per_group": 20,
+    "min_distance_to_any_annotated_site": {
+      "exon_interior": 20,
+      "intron_interior": 20,
+      "decoy": 10
+    },
+    "seed": 42,
+    "window": "genome + strand, position at offset 300 (dataset convention)"
+  },
+  "convention_check": {
+    "donor": {
+      "with_canonical_motif": 616,
+      "sites": 620
+    },
+    "acceptor": {
+      "with_canonical_motif": 619,
+      "sites": 620
+    }
+  },
+  "counts": {
+    "train": {
+      "exon_interior": 1200,
+      "intron_interior": 1200,
+      "decoy": 1200,
+      "total": 3600
+    },
+    "holdout": {
+      "exon_interior": 300,
+      "intron_interior": 300,
+      "decoy": 300,
+      "total": 900
+    }
+  },
+  "by_subtype": {
+    "decoy / acceptor-like (AG before) / exon": 154,
+    "decoy / acceptor-like (AG before) / intron": 596,
+    "decoy / donor-like (GT after) / exon": 118,
+    "decoy / donor-like (GT after) / intron": 632,
+    "exon_interior / exon": 1500,
+    "intron_interior / intron": 1500
+  },
+  "interior_windows_that_also_carry_a_motif": {
+    "exon_interior": {
+      "donor-like": 70,
+      "acceptor-like": 104,
+      "both": 6
+    },
+    "intron_interior": {
+      "donor-like": 96,
+      "acceptor-like": 89,
+      "both": 1
+    }
+  },
+  "genes": {
+    "ENSG00000175985": {
+      "symbol": "PLEKHD1",
+      "chrom": "14",
+      "split": "train",
+      "strand": 1,
+      "exons": 13,
+      "canonical_span": 46824,
+      "exon_pool": 4411,
+      "intron_pool": 38273,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000172717": {
+      "symbol": "GARIN2",
+      "chrom": "14",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 8,
+      "canonical_span": 34501,
+      "exon_pool": 1162,
+      "intron_pool": 30095,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000152944": {
+      "symbol": "MED21",
+      "chrom": "12",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 8116,
+      "exon_pool": 2414,
+      "intron_pool": 5059,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000064102": {
+      "symbol": "INTS13",
+      "chrom": "12",
+      "split": "holdout",
+      "strand": -1,
+      "exons": 17,
+      "canonical_span": 32801,
+      "exon_pool": 1880,
+      "intron_pool": 27337,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000169895": {
+      "symbol": "SYAP1",
+      "chrom": "X",
+      "split": "train",
+      "strand": 1,
+      "exons": 9,
+      "canonical_span": 45729,
+      "exon_pool": 5762,
+      "intron_pool": 38271,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000165192": {
+      "symbol": "ASB11",
+      "chrom": "X",
+      "split": "train",
+      "strand": -1,
+      "exons": 7,
+      "canonical_span": 33944,
+      "exon_pool": 2536,
+      "intron_pool": 29542,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000152193": {
+      "symbol": "OBI1",
+      "chrom": "13",
+      "split": "train",
+      "strand": -1,
+      "exons": 6,
+      "canonical_span": 44867,
+      "exon_pool": 3265,
+      "intron_pool": 36626,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000168542": {
+      "symbol": "COL3A1",
+      "chrom": "2",
+      "split": "train",
+      "strand": 1,
+      "exons": 51,
+      "canonical_span": 38374,
+      "exon_pool": 3193,
+      "intron_pool": 29128,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000138449": {
+      "symbol": "SLC40A1",
+      "chrom": "2",
+      "split": "train",
+      "strand": -1,
+      "exons": 8,
+      "canonical_span": 20197,
+      "exon_pool": 2929,
+      "intron_pool": 12468,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000213973": {
+      "symbol": "ZNF99",
+      "chrom": "19",
+      "split": "train",
+      "strand": -1,
+      "exons": 4,
+      "canonical_span": 31969,
+      "exon_pool": 7741,
+      "intron_pool": 22919,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000196350": {
+      "symbol": "ZNF729",
+      "chrom": "19",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 30736,
+      "exon_pool": 3724,
+      "intron_pool": 26174,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000109991": {
+      "symbol": "P2RX3",
+      "chrom": "11",
+      "split": "train",
+      "strand": 1,
+      "exons": 12,
+      "canonical_span": 34045,
+      "exon_pool": 3346,
+      "intron_pool": 28804,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000150244": {
+      "symbol": "TRIM48",
+      "chrom": "11",
+      "split": "train",
+      "strand": 1,
+      "exons": 6,
+      "canonical_span": 8960,
+      "exon_pool": 1284,
+      "intron_pool": 7074,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000106344": {
+      "symbol": "RBM28",
+      "chrom": "7",
+      "split": "train",
+      "strand": -1,
+      "exons": 19,
+      "canonical_span": 46224,
+      "exon_pool": 14639,
+      "intron_pool": 28354,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000165055": {
+      "symbol": "METTL2B",
+      "chrom": "7",
+      "split": "train",
+      "strand": 1,
+      "exons": 9,
+      "canonical_span": 29855,
+      "exon_pool": 5441,
+      "intron_pool": 21915,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000163576": {
+      "symbol": "EFHB",
+      "chrom": "3",
+      "split": "train",
+      "strand": -1,
+      "exons": 13,
+      "canonical_span": 54746,
+      "exon_pool": 2265,
+      "intron_pool": 50796,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000129810": {
+      "symbol": "SGO1",
+      "chrom": "3",
+      "split": "train",
+      "strand": -1,
+      "exons": 8,
+      "canonical_span": 16723,
+      "exon_pool": 2451,
+      "intron_pool": 12317,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000188626": {
+      "symbol": "GOLGA8M",
+      "chrom": "15",
+      "split": "train",
+      "strand": -1,
+      "exons": 19,
+      "canonical_span": 13839,
+      "exon_pool": 4649,
+      "intron_pool": 7550,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000178115": {
+      "symbol": "GOLGA8Q",
+      "chrom": "15",
+      "split": "train",
+      "strand": 1,
+      "exons": 19,
+      "canonical_span": 13635,
+      "exon_pool": 4391,
+      "intron_pool": 7176,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000102554": {
+      "symbol": "KLF5",
+      "chrom": "13",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 18534,
+      "exon_pool": 3190,
+      "intron_pool": 14889,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000173545": {
+      "symbol": "ZNF622",
+      "chrom": "5",
+      "split": "train",
+      "strand": -1,
+      "exons": 6,
+      "canonical_span": 14282,
+      "exon_pool": 1495,
+      "intron_pool": 12012,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000145569": {
+      "symbol": "OTULINL",
+      "chrom": "5",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 8,
+      "canonical_span": 34389,
+      "exon_pool": 6542,
+      "intron_pool": 27083,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000129646": {
+      "symbol": "QRICH2",
+      "chrom": "17",
+      "split": "train",
+      "strand": -1,
+      "exons": 19,
+      "canonical_span": 34228,
+      "exon_pool": 5210,
+      "intron_pool": 27436,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000173918": {
+      "symbol": "C1QTNF1",
+      "chrom": "17",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 25620,
+      "exon_pool": 2680,
+      "intron_pool": 17567,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000165417": {
+      "symbol": "GTF2A1",
+      "chrom": "14",
+      "split": "train",
+      "strand": -1,
+      "exons": 9,
+      "canonical_span": 45508,
+      "exon_pool": 6023,
+      "intron_pool": 38307,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000100601": {
+      "symbol": "ALKBH1",
+      "chrom": "14",
+      "split": "train",
+      "strand": -1,
+      "exons": 6,
+      "canonical_span": 35620,
+      "exon_pool": 2247,
+      "intron_pool": 28148,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000106128": {
+      "symbol": "GHRHR",
+      "chrom": "7",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 13,
+      "canonical_span": 15576,
+      "exon_pool": 1192,
+      "intron_pool": 12877,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000170852": {
+      "symbol": "KBTBD2",
+      "chrom": "7",
+      "split": "train",
+      "strand": -1,
+      "exons": 4,
+      "canonical_span": 23589,
+      "exon_pool": 3434,
+      "intron_pool": 16695,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000139155": {
+      "symbol": "SLCO1C1",
+      "chrom": "12",
+      "split": "train",
+      "strand": 1,
+      "exons": 15,
+      "canonical_span": 58055,
+      "exon_pool": 2860,
+      "intron_pool": 51751,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000111711": {
+      "symbol": "GOLT1B",
+      "chrom": "12",
+      "split": "train",
+      "strand": 1,
+      "exons": 5,
+      "canonical_span": 16620,
+      "exon_pool": 3086,
+      "intron_pool": 10932,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000102738": {
+      "symbol": "MRPS31",
+      "chrom": "13",
+      "split": "train",
+      "strand": -1,
+      "exons": 7,
+      "canonical_span": 42063,
+      "exon_pool": 1213,
+      "intron_pool": 39324,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000023516": {
+      "symbol": "AKAP11",
+      "chrom": "13",
+      "split": "train",
+      "strand": 1,
+      "exons": 13,
+      "canonical_span": 51110,
+      "exon_pool": 9435,
+      "intron_pool": 40048,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000156427": {
+      "symbol": "FGF18",
+      "chrom": "5",
+      "split": "train",
+      "strand": 1,
+      "exons": 5,
+      "canonical_span": 37980,
+      "exon_pool": 1836,
+      "intron_pool": 35830,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000113732": {
+      "symbol": "ATP6V0E1",
+      "chrom": "5",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 51675,
+      "exon_pool": 1280,
+      "intron_pool": 49029,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000230873": {
+      "symbol": "STMND1",
+      "chrom": "6",
+      "split": "train",
+      "strand": 1,
+      "exons": 5,
+      "canonical_span": 29329,
+      "exon_pool": 1370,
+      "intron_pool": 23186,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000112183": {
+      "symbol": "RBM24",
+      "chrom": "6",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 12511,
+      "exon_pool": 2513,
+      "intron_pool": 5173,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000110063": {
+      "symbol": "DCPS",
+      "chrom": "11",
+      "split": "train",
+      "strand": 1,
+      "exons": 6,
+      "canonical_span": 45946,
+      "exon_pool": 5086,
+      "intron_pool": 35271,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000109832": {
+      "symbol": "DDX25",
+      "chrom": "11",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 12,
+      "canonical_span": 24336,
+      "exon_pool": 6789,
+      "intron_pool": 14764,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000104055": {
+      "symbol": "TGM5",
+      "chrom": "15",
+      "split": "train",
+      "strand": -1,
+      "exons": 13,
+      "canonical_span": 34339,
+      "exon_pool": 2363,
+      "intron_pool": 30166,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000159495": {
+      "symbol": "TGM7",
+      "chrom": "15",
+      "split": "train",
+      "strand": -1,
+      "exons": 13,
+      "canonical_span": 25985,
+      "exon_pool": 1847,
+      "intron_pool": 23081,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000139055": {
+      "symbol": "ERP27",
+      "chrom": "12",
+      "split": "train",
+      "strand": -1,
+      "exons": 7,
+      "canonical_span": 24499,
+      "exon_pool": 1307,
+      "intron_pool": 22375,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000013588": {
+      "symbol": "GPRC5A",
+      "chrom": "12",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 26376,
+      "exon_pool": 6417,
+      "intron_pool": 15526,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000134153": {
+      "symbol": "EMC7",
+      "chrom": "15",
+      "split": "train",
+      "strand": -1,
+      "exons": 5,
+      "canonical_span": 17846,
+      "exon_pool": 750,
+      "intron_pool": 15819,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000215252": {
+      "symbol": "GOLGA8B",
+      "chrom": "15",
+      "split": "holdout",
+      "strand": -1,
+      "exons": 24,
+      "canonical_span": 58557,
+      "exon_pool": 4643,
+      "intron_pool": 47610,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000166716": {
+      "symbol": "ZNF592",
+      "chrom": "15",
+      "split": "train",
+      "strand": 1,
+      "exons": 11,
+      "canonical_span": 57854,
+      "exon_pool": 7698,
+      "intron_pool": 48447,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000278662": {
+      "symbol": "GOLGA6L10",
+      "chrom": "15",
+      "split": "train",
+      "strand": -1,
+      "exons": 9,
+      "canonical_span": 9483,
+      "exon_pool": 4054,
+      "intron_pool": 4478,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000156194": {
+      "symbol": "PPEF2",
+      "chrom": "4",
+      "split": "train",
+      "strand": -1,
+      "exons": 17,
+      "canonical_span": 42586,
+      "exon_pool": 2667,
+      "intron_pool": 36168,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000109321": {
+      "symbol": "AREG",
+      "chrom": "4",
+      "split": "train",
+      "strand": 1,
+      "exons": 6,
+      "canonical_span": 9870,
+      "exon_pool": 1034,
+      "intron_pool": 7734,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000133636": {
+      "symbol": "NTS",
+      "chrom": "12",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 8698,
+      "exon_pool": 1074,
+      "intron_pool": 6917,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000180318": {
+      "symbol": "ALX1",
+      "chrom": "12",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 21565,
+      "exon_pool": 1212,
+      "intron_pool": 20119,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000163508": {
+      "symbol": "EOMES",
+      "chrom": "3",
+      "split": "train",
+      "strand": -1,
+      "exons": 6,
+      "canonical_span": 6371,
+      "exon_pool": 3025,
+      "intron_pool": 2917,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000143278": {
+      "symbol": "F13B",
+      "chrom": "1",
+      "split": "holdout",
+      "strand": -1,
+      "exons": 12,
+      "canonical_span": 28520,
+      "exon_pool": 2142,
+      "intron_pool": 23333,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000244414": {
+      "symbol": "CFHR1",
+      "chrom": "1",
+      "split": "train",
+      "strand": 1,
+      "exons": 6,
+      "canonical_span": 12459,
+      "exon_pool": 743,
+      "intron_pool": 9859,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000149968": {
+      "symbol": "MMP3",
+      "chrom": "11",
+      "split": "holdout",
+      "strand": -1,
+      "exons": 10,
+      "canonical_span": 7809,
+      "exon_pool": 1433,
+      "intron_pool": 5316,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000196611": {
+      "symbol": "MMP1",
+      "chrom": "11",
+      "split": "train",
+      "strand": -1,
+      "exons": 10,
+      "canonical_span": 8242,
+      "exon_pool": 1536,
+      "intron_pool": 5588,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000146809": {
+      "symbol": "ASB15",
+      "chrom": "7",
+      "split": "train",
+      "strand": 1,
+      "exons": 12,
+      "canonical_span": 37661,
+      "exon_pool": 4038,
+      "intron_pool": 28608,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000002745": {
+      "symbol": "WNT16",
+      "chrom": "7",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 12105,
+      "exon_pool": 2952,
+      "intron_pool": 8711,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000120217": {
+      "symbol": "CD274",
+      "chrom": "9",
+      "split": "train",
+      "strand": 1,
+      "exons": 7,
+      "canonical_span": 20013,
+      "exon_pool": 3277,
+      "intron_pool": 14055,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000137033": {
+      "symbol": "IL33",
+      "chrom": "9",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 8,
+      "canonical_span": 42177,
+      "exon_pool": 2387,
+      "intron_pool": 37144,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000115828": {
+      "symbol": "QPCT",
+      "chrom": "2",
+      "split": "train",
+      "strand": 1,
+      "exons": 7,
+      "canonical_span": 28693,
+      "exon_pool": 1407,
+      "intron_pool": 25922,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000204449": {
+      "symbol": "TRIM49C",
+      "chrom": "11",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 8,
+      "canonical_span": 10920,
+      "exon_pool": 1900,
+      "intron_pool": 8491,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000171204": {
+      "symbol": "TMEM126B",
+      "chrom": "11",
+      "split": "holdout",
+      "strand": 1,
+      "exons": 5,
+      "canonical_span": 7944,
+      "exon_pool": 807,
+      "intron_pool": 739,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000274349": {
+      "symbol": "ZNF658",
+      "chrom": "9",
+      "split": "train",
+      "strand": 1,
+      "exons": 5,
+      "canonical_span": 20702,
+      "exon_pool": 3799,
+      "intron_pool": 13542,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000275969": {
+      "symbol": "SPATA31A3",
+      "chrom": "9",
+      "split": "train",
+      "strand": -1,
+      "exons": 4,
+      "canonical_span": 6247,
+      "exon_pool": 4025,
+      "intron_pool": 1558,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000023608": {
+      "symbol": "SNAPC1",
+      "chrom": "14",
+      "split": "train",
+      "strand": 1,
+      "exons": 10,
+      "canonical_span": 34009,
+      "exon_pool": 2175,
+      "intron_pool": 30738,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000165617": {
+      "symbol": "DACT1",
+      "chrom": "14",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 10360,
+      "exon_pool": 3708,
+      "intron_pool": 5862,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000156345": {
+      "symbol": "CDK20",
+      "chrom": "9",
+      "split": "train",
+      "strand": -1,
+      "exons": 8,
+      "canonical_span": 8093,
+      "exon_pool": 1703,
+      "intron_pool": 2434,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000177992": {
+      "symbol": "SPATA31E1",
+      "chrom": "9",
+      "split": "train",
+      "strand": 1,
+      "exons": 4,
+      "canonical_span": 6027,
+      "exon_pool": 4311,
+      "intron_pool": 1482,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000260230": {
+      "symbol": "FRRS1L",
+      "chrom": "9",
+      "split": "train",
+      "strand": -1,
+      "exons": 5,
+      "canonical_span": 36957,
+      "exon_pool": 7995,
+      "intron_pool": 21311,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000136810": {
+      "symbol": "TXN",
+      "chrom": "9",
+      "split": "train",
+      "strand": -1,
+      "exons": 5,
+      "canonical_span": 12698,
+      "exon_pool": 514,
+      "intron_pool": 8691,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000162624": {
+      "symbol": "LHX8",
+      "chrom": "1",
+      "split": "train",
+      "strand": 1,
+      "exons": 9,
+      "canonical_span": 27146,
+      "exon_pool": 1899,
+      "intron_pool": 22451,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000137965": {
+      "symbol": "IFI44",
+      "chrom": "1",
+      "split": "train",
+      "strand": 1,
+      "exons": 9,
+      "canonical_span": 14243,
+      "exon_pool": 1283,
+      "intron_pool": 11093,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000186480": {
+      "symbol": "INSIG1",
+      "chrom": "7",
+      "split": "train",
+      "strand": 1,
+      "exons": 6,
+      "canonical_span": 12358,
+      "exon_pool": 2612,
+      "intron_pool": 5140,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000157212": {
+      "symbol": "PAXIP1",
+      "chrom": "7",
+      "split": "train",
+      "strand": -1,
+      "exons": 21,
+      "canonical_span": 59435,
+      "exon_pool": 3042,
+      "intron_pool": 41775,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    },
+    "ENSG00000112130": {
+      "symbol": "RNF8",
+      "chrom": "6",
+      "split": "train",
+      "strand": 1,
+      "exons": 8,
+      "canonical_span": 40752,
+      "exon_pool": 5279,
+      "intron_pool": 33309,
+      "windows": {
+        "exon_interior": 20,
+        "intron_interior": 20,
+        "decoy": 20
+      }
+    }
+  },
+  "tsv": "data/hard_negatives/hard_negatives.tsv",
+  "tsv_sha1": "7c8c885d7b1cb63af604f8d4e44805ddbe85d06e"
+}

@@ -1,0 +1,69 @@
+{
+  "python": "3.14.4",
+  "torch": "2.15.0+cpu",
+  "transformers": "4.49.0",
+  "sequence_length": 627,
+  "results": [
+    {
+      "key": "nt50",
+      "repo": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+      "params": "50M",
+      "tokens": "6-mers",
+      "note": "Smallest Nucleotide Transformer. Plain PyTorch, no triton.",
+      "status": "ok",
+      "loaded_via": "AutoModelForMaskedLM",
+      "n_tokens": 108,
+      "truncated": false,
+      "max_tokens": null,
+      "embedding_dim": 512,
+      "load_seconds": 18.9,
+      "forward_seconds": 0.07,
+      "saved_to": "/home/kodkod/Desktop/FinalProject/dna-phase/results/nt50_embeddings.pt"
+    },
+    {
+      "key": "nt100",
+      "repo": "InstaDeepAI/nucleotide-transformer-v2-100m-multi-species",
+      "params": "100M",
+      "tokens": "6-mers",
+      "note": "Same family, one size up (~400 MB download).",
+      "status": "ok",
+      "loaded_via": "AutoModelForMaskedLM",
+      "n_tokens": 108,
+      "truncated": false,
+      "max_tokens": null,
+      "embedding_dim": 512,
+      "load_seconds": 35.3,
+      "forward_seconds": 0.11
+    },
+    {
+      "key": "dnabert1",
+      "repo": "zhihan1996/DNA_bert_6",
+      "params": "~89M",
+      "tokens": "6-mers (space separated)",
+      "note": "Original DNABERT. Input must be pre-split into 6-mers.",
+      "status": "ok",
+      "loaded_via": "AutoModel",
+      "n_tokens": 512,
+      "truncated": true,
+      "max_tokens": 512,
+      "embedding_dim": 768,
+      "load_seconds": 1.5,
+      "forward_seconds": 0.29
+    },
+    {
+      "key": "dnabert2",
+      "repo": "zhihan1996/DNABERT-2-117M",
+      "params": "117M",
+      "tokens": "BPE",
+      "note": "The one the advisor named. Needs: pip install einops",
+      "status": "ok",
+      "loaded_via": "AutoModel",
+      "n_tokens": 133,
+      "truncated": false,
+      "max_tokens": null,
+      "embedding_dim": 768,
+      "load_seconds": 39.1,
+      "forward_seconds": 0.13
+    }
+  ]
+}
