@@ -30,9 +30,9 @@ Tasks: spend the first two weeks learning the basics of DNA, amino acids, protei
 
 ## Notes on the dates
 
-Only the 23 Nov 2026 meeting has a dated recording. The 16 Nov 2026 entry was written by
-us from memory; the folders hold no notes or recording of that meeting. The three earlier
-entries were reconstructed from the meeting transcripts (kept on the laptop, not in this
+There have been five meetings. Only meeting 5 (23 Nov 2026) has a dated recording. The
+entry for meeting 4 (16 Nov 2026) was written by us from memory; the folders hold no notes
+or recording of that meeting. The three earlier entries were reconstructed from the meeting transcripts (kept on the laptop, not in this
 repo), and no file states their dates, so they are marked approximate. What the files do
 show:
 
