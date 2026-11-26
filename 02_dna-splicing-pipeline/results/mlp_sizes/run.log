@@ -1,0 +1,25 @@
+InstaDeepAI/nucleotide-transformer-v2-50m-multi-species [center_plus_prev_concat]: X_train (8000, 1024), X_test (2000, 1024)
+fit 7200 / validation 800 / test 2000
+  1024-128-3      seed 0  params 131,587  epoch   2 (ran 22)  val loss 0.1676  test acc 0.9400  macro-F1 0.9398  2.9s
+  1024-128-3      seed 1  params 131,587  epoch   2 (ran 22)  val loss 0.1652  test acc 0.9390  macro-F1 0.9388  2.4s
+  1024-128-3      seed 2  params 131,587  epoch   2 (ran 22)  val loss 0.1690  test acc 0.9410  macro-F1 0.9407  1.4s
+  1024-256-3      seed 0  params 263,171  epoch   2 (ran 22)  val loss 0.1700  test acc 0.9405  macro-F1 0.9403  2.1s
+  1024-256-3      seed 1  params 263,171  epoch   2 (ran 22)  val loss 0.1625  test acc 0.9400  macro-F1 0.9398  2.3s
+  1024-256-3      seed 2  params 263,171  epoch   2 (ran 22)  val loss 0.1602  test acc 0.9345  macro-F1 0.9343  2.1s
+  1024-512-3      seed 0  params 526,339  epoch   2 (ran 22)  val loss 0.1755  test acc 0.9430  macro-F1 0.9428  5.3s
+  1024-512-3      seed 1  params 526,339  epoch   2 (ran 22)  val loss 0.1646  test acc 0.9410  macro-F1 0.9408  5.0s
+  1024-512-3      seed 2  params 526,339  epoch   2 (ran 22)  val loss 0.1704  test acc 0.9375  macro-F1 0.9372  5.0s
+  1024-256-128-3  seed 0  params 295,683  epoch   1 (ran 21)  val loss 0.1840  test acc 0.9305  macro-F1 0.9301  3.9s
+  1024-256-128-3  seed 1  params 295,683  epoch   2 (ran 22)  val loss 0.1806  test acc 0.9355  macro-F1 0.9352  3.1s
+  1024-256-128-3  seed 2  params 295,683  epoch   1 (ran 21)  val loss 0.1863  test acc 0.9305  macro-F1 0.9300  3.0s
+
+MATCH: 1024-256-3 seed 0 gives acc 0.9405, macro-F1 0.9403, epoch 2; phase1_results.json has acc 0.9405, macro-F1 0.9403, epoch 2.
+
+| Head | Trainable params | Test macro-F1 | Test accuracy |
+|---|---:|---|---|
+| 1024 → 128 → 3 | 131,587 | 0.9398 ± 0.0010 [0.9388–0.9407] | 0.9400 ± 0.0010 [0.9390–0.9410] |
+| 1024 → 256 → 3 (current) | 263,171 | 0.9381 ± 0.0033 [0.9343–0.9403] | 0.9383 ± 0.0033 [0.9345–0.9405] |
+| 1024 → 512 → 3 | 526,339 | 0.9403 ± 0.0028 [0.9372–0.9428] | 0.9405 ± 0.0028 [0.9375–0.9430] |
+| 1024 → 256 → 128 → 3 | 295,683 | 0.9318 ± 0.0030 [0.9300–0.9352] | 0.9322 ± 0.0029 [0.9305–0.9355] |
+
+Wrote /home/kodkod/Desktop/FinalProject/02_dna-splicing-pipeline/results/mlp_sizes
