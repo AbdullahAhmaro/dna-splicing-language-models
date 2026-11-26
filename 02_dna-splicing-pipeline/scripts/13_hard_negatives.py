@@ -209,12 +209,46 @@ def canonical_sites(rec):
     return (ends, starts) if rec["strand"] == 1 else (starts, ends)
 
 
-def mine_gene(rec, rng):
+def site_distance(pos, sites):
+    """Distance from each position to the nearest annotated site (10**9 if there is none)."""
+    sites = np.unique(np.asarray(sites, dtype=np.int64))
+    if len(sites) == 0:
+        return np.full(len(pos), 10 ** 9)
+    k = np.searchsorted(sites, pos)
+    left = sites[np.clip(k - 1, 0, len(sites) - 1)]
+    right = sites[np.clip(k, 0, len(sites) - 1)]
+    return np.minimum(np.abs(pos - left), np.abs(right - pos))
+
+
+def window_flags(rec, pos):
+    """For every position p: does window(rec, p) hold 600 bases, all A/C/G/T (ok), and
+    what motif_of(window(rec, p), strand) says ('none' where not ok). The same answers
+    as building each window string, without building them (genes can span Mb)."""
+    s = np.frombuffer(rec["seq_plus"].encode("ascii"), dtype=np.uint8)
+    i = np.asarray(pos, dtype=np.int64) - rec["region_lo"]
+    inside = (i - CENTER >= 0) & (i + CENTER <= len(s))
+    ii = np.clip(i, CENTER, len(s) - CENTER)
+    bad = np.concatenate([[0], np.cumsum(~np.isin(s, np.frombuffer(b"ACGT", np.uint8)))])
+    ok = inside & (bad[ii + CENTER] - bad[ii - CENTER] == 0)
+
+    def at(off, pair):                       # window[300+off : 302+off] == pair
+        j = np.clip(ii + off, 0, len(s) - 2)
+        return (s[j] == ord(pair[0])) & (s[j + 1] == ord(pair[1]))
+    if rec["strand"] == 1:
+        d, a = at(1, "GT"), at(-2, "AG")
+    else:
+        d, a = at(-2, "AC"), at(1, "CT")
+    motif = np.where(d & ~a, "donor-like", np.where(a & ~d, "acceptor-like",
+                                                    np.where(d & a, "both", "none")))
+    motif[~ok] = "none"
+    return ok, motif
+
+
+def mine_gene(rec, rng, per_gene=PER_GENE):
+    """Draw per_gene windows per group (decoys: half donor-like) from one gene."""
     lo, hi = rec["tx_start"], rec["tx_end"]
     pos = np.arange(lo, hi + 1)
-    sites = np.array(rec["annotated_sites"])
-    dist = np.min(np.abs(pos[:, None] - sites[None, :]), axis=1) if len(sites) else \
-        np.full(len(pos), 10 ** 9)
+    dist = site_distance(pos, rec["annotated_sites"])
     in_exon = np.zeros(len(pos), bool)
     for s, e in rec["exons"]:
         in_exon[max(s, lo) - lo:min(e, hi) - lo + 1] = True
@@ -222,9 +256,7 @@ def mine_gene(rec, rng):
     for s, e in rec["annotated_exons"]:
         if e >= lo and s <= hi:
             in_any_exon[max(s, lo) - lo:min(e, hi) - lo + 1] = True
-    wins = [window(rec, int(p)) for p in pos]
-    ok = np.array([len(w) == WINDOW and set(w) <= set("ACGT") for w in wins])
-    motif = np.array([motif_of(w, rec["strand"]) if k else "none" for w, k in zip(wins, ok)])
+    ok, motif = window_flags(rec, pos)
     pools = {
         "exon_interior": ok & in_exon & (dist >= MIN_DIST["exon_interior"]),
         "intron_interior": ok & ~in_exon & ~in_any_exon & (dist >= MIN_DIST["intron_interior"]),
@@ -239,13 +271,14 @@ def mine_gene(rec, rng):
             taken[j] = True
             rows.append({"group": group, "subtype": subtype, "pos": int(pos[j]),
                          "in_canonical_exon": bool(in_exon[j]),
-                         "motif_at_canonical_offset": motif[j], "sequence": wins[j]})
+                         "motif_at_canonical_offset": motif[j],
+                         "sequence": window(rec, int(pos[j]))})
     # decoys first, so the interior groups are drawn from what is left
-    take(dec & (motif == "donor-like"), PER_GENE // 2, "decoy", "donor-like (GT after)")
-    take(dec & (motif == "acceptor-like"), PER_GENE - PER_GENE // 2, "decoy",
+    take(dec & (motif == "donor-like"), per_gene // 2, "decoy", "donor-like (GT after)")
+    take(dec & (motif == "acceptor-like"), per_gene - per_gene // 2, "decoy",
          "acceptor-like (AG before)")
     for g in ("exon_interior", "intron_interior"):
-        take(pools[g], PER_GENE, g, "")
+        take(pools[g], per_gene, g, "")
     return rows, {"canonical_span": int(hi - lo + 1), "exon_pool": int(pools["exon_interior"].sum()),
                   "intron_pool": int(pools["intron_interior"].sum())}
 

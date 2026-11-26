@@ -25,6 +25,11 @@ RESULTS_JSON = RESULTS_DIR / "phase1_results.json"
 EMBED_STATS_JSON = RESULTS_DIR / "embed_stats.json"
 RUN_STEPS_TSV = RESULTS_DIR / "run_steps.tsv"
 
+# The genome-wide dataset of 16_genome_dataset.py (GRCh38 + MANE Select, same format).
+GENOME_DIR = DATA_DIR / "genome"
+GENOME_DEFAULT_DIR = GENOME_DIR / "splice_sites_genome"      # 120,000 balanced train + full test
+GENOME_FULL_DIR = GENOME_DIR / "splice_sites_genome_full"    # every window, + *_meta.parquet
+
 DATASET_REPO = "InstaDeepAI/nucleotide_transformer_downstream_tasks_revised"
 DATASET_CONFIG = "splice_sites_all"
 SEED = 42
@@ -52,6 +57,26 @@ def load_splits():
     if not DATASET_DIR.exists():
         raise SystemExit(f"{DATASET_DIR} not found. Run 01_get_data.py first.")
     return load_from_disk(str(DATASET_DIR))
+
+
+def load_genome_split(split: str, columns=None, full: bool = False, meta: bool = False) -> dict:
+    """One split of the genome dataset (16_genome_dataset.py) as a dict of columns:
+    the default files (120,000-window balanced train, full chr20/21 test) unless full=True;
+    meta=True reads the full split's per-row annotations (kind, group, gene, ...) instead."""
+    import pyarrow.parquet as pq
+
+    if meta:
+        path = GENOME_FULL_DIR / f"{split}_meta.parquet"
+    else:
+        path = (GENOME_FULL_DIR if full else GENOME_DEFAULT_DIR) / f"{split}.parquet"
+    if not path.exists():
+        raise SystemExit(f"{path} not found. Run 16_genome_dataset.py first.")
+    return pq.read_table(path, columns=columns).to_pydict()
+
+
+def genome_emb_dir(repo: str):
+    """Where embeddings of the genome dataset go; kept apart from splice_sites_all's."""
+    return EMB_DIR / model_slug(repo) / "genome"
 
 
 def dataset_chromosomes() -> dict:
