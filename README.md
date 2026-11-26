@@ -6,12 +6,11 @@ position in human DNA is a splice **donor** (exon→intron), an **acceptor** (in
 or neither.
 
 - **Students:** Abdullah Ahmaro and Tala Harbawi. Older notes call Abdullah "Josh".
-- **Advisor:** Dr. Yehuda Hassin (hassin@jce.ac.il). Weekly meeting: Mondays 11:30.
+- **Advisor:** Dr. Yehuda Hassin. Weekly meeting: Mondays 11:30.
   GPU-cluster access goes through Effi (the request email is drafted on the laptop, not in
   this repo).
 - **Logbook:** [LOGBOOK.md](LOGBOOK.md) has one entry per advisor meeting, newest first:
   what we presented, what the advisor said, and the tasks for the next week.
-- **Repository:** private (the proposal contains our ID numbers) and updated every week.
 - **History:** the project began on protein structure (AlphaFold/ESMFold on ubiquitin,
   alanine scanning). The advisor then moved us to DNA, between 9 and 15 Nov 2026
   (see `04_archive_protein-structure/README.md`).
