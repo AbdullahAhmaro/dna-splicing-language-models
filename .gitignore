@@ -82,3 +82,8 @@ kaggle.json
 # --- Proposal documents: kept on the laptop only (they carry personal details) ---
 01_proposal/*.docx
 03_for-meeting-2026-11-23/10_proposal_hebrew_splice-sites_2026-11-17.docx
+
+# --- Kaggle model comparison (02_dna-splicing-pipeline/results/compare_models/) ---
+# Keep the small test-prediction files; never the trained heads (model weights).
+02_dna-splicing-pipeline/results/compare_models/predictions/*_head.pt
+!02_dna-splicing-pipeline/results/compare_models/predictions/*.npz
