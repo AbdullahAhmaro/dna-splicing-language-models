@@ -87,3 +87,8 @@ kaggle.json
 # Keep the small test-prediction files; never the trained heads (model weights).
 02_dna-splicing-pipeline/results/compare_models/predictions/*_head.pt
 !02_dna-splicing-pipeline/results/compare_models/predictions/*.npz
+
+# --- Kaggle NT 2.5B on the genome dataset (02_dna-splicing-pipeline/results/genome_nt2500m/) ---
+# Keep the small test-prediction files; never the trained heads (model weights).
+02_dna-splicing-pipeline/results/genome_nt2500m/heads/
+!02_dna-splicing-pipeline/results/genome_nt2500m/predictions/*.npz

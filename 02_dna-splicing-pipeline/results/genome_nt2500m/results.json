@@ -1,0 +1,809 @@
+{
+  "smoke": false,
+  "note": "Full run: the 120,000-window default train file and every chr20/21 test window.",
+  "task": "3-class splice-site windows (none / acceptor / donor), frozen backbone + small MLP head",
+  "dataset": "genome-wide splice-site windows (scripts/16_genome_dataset.py), Kaggle package of scripts/19_kaggle_genome_package.py",
+  "data_files": {
+    "genome_train.parquet": "cf3e201fab76aba8047c937192ad26f3a5a085f193ab69d120e66ed1a857e407",
+    "genome_test.parquet": "0c2e1f7c23e8e53410faef52a443a2eb3daf679073da9449083cdc48c0816954"
+  },
+  "split": {
+    "train_chromosomes": [
+      "chr1",
+      "chr2",
+      "chr3",
+      "chr4",
+      "chr5",
+      "chr6",
+      "chr7",
+      "chr8",
+      "chr9",
+      "chrX",
+      "chrY",
+      "chr10",
+      "chr11",
+      "chr12",
+      "chr13",
+      "chr14",
+      "chr15",
+      "chr16",
+      "chr17",
+      "chr18",
+      "chr19",
+      "chr22"
+    ],
+    "test_chromosomes": "chr20, chr21",
+    "n_train": 120000,
+    "n_fit": 108000,
+    "n_val": 12000,
+    "n_test": 18653,
+    "test_genes": 660,
+    "test_kinds": {
+      "donor": 6217,
+      "acceptor": 6220,
+      "decoy_GT": 1036,
+      "decoy_AG": 1036,
+      "exon_interior": 2072,
+      "intron_interior": 2072
+    },
+    "val_split_seed": 0,
+    "rows": {
+      "train": {
+        "n": 120000,
+        "sha1": "be15f2f778dcdd80",
+        "file_sha256": "cf3e201fab76aba8047c937192ad26f3a5a085f193ab69d120e66ed1a857e407"
+      },
+      "test": {
+        "n": 18653,
+        "sha1": "95a863e1a1d4df3d",
+        "file_sha256": "0c2e1f7c23e8e53410faef52a443a2eb3daf679073da9449083cdc48c0816954"
+      }
+    }
+  },
+  "features": "last-layer vector of the token covering base 300, concatenated with the token before it",
+  "device": "cuda:0",
+  "gpu": "Tesla T4",
+  "gpu_compute_capability": "7.5",
+  "gpu_total_gb": 15.6,
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "transformers": "4.49.0",
+    "sklearn": "1.6.1"
+  },
+  "reference_model": "nt_v2_50m",
+  "challenger_model": "nt_2500m",
+  "bootstrap": {
+    "resamples": 2000,
+    "unit": "test genes (gene_id), drawn with replacement; the same redraws for every model",
+    "seed": 42
+  },
+  "run_order": [
+    "nt_v2_50m",
+    "nt_2500m"
+  ],
+  "models": {
+    "nt_v2_50m": {
+      "name": "NT-v2 50M",
+      "repo": "InstaDeepAI/nucleotide-transformer-v2-50m-multi-species",
+      "revision": "81b29e5786726d891dbf929404ef20adca5b36f1",
+      "status": "ok",
+      "embedding": {
+        "precision": "fp32 weights + fp16 autocast",
+        "loaded_via": "AutoModelForMaskedLM",
+        "parameters": 55904972,
+        "hidden_size": 512,
+        "feature_dim": 1024,
+        "max_tokens": 2048,
+        "load_seconds": 1.6,
+        "fp16_check": {
+          "windows": 16,
+          "min_cosine_vs_fp32": 0.999993,
+          "max_abs_diff": 0.0112
+        },
+        "batch_size_final": 64,
+        "embed_seconds": 216.1,
+        "embed_seconds_this_session": 216.1,
+        "windows_this_session": 138653,
+        "sessions": 1,
+        "embed_ms_per_window": 1.56,
+        "peak_gpu_gb": 0.51,
+        "peak_gpu_reserved_gb": 0.66,
+        "failed_attempts": [],
+        "from_checkpoint": false,
+        "tokenise_seconds": 101.9
+      },
+      "centre_token": {
+        "windows_checked": 138653,
+        "distinct_placements": 1,
+        "most_common": [
+          {
+            "rows": 138653,
+            "share": 1.0,
+            "centre_input_index": 51,
+            "centre_bases": [
+              300,
+              305
+            ],
+            "previous_input_index": 50,
+            "previous_bases": [
+              294,
+              299
+            ]
+          }
+        ],
+        "tokenizer": "EsmTokenizer (slow: token lengths)",
+        "max_tokens": 2048,
+        "tokens_per_window": [
+          101,
+          101
+        ],
+        "tokenise_seconds": 101.9
+      },
+      "head_training": {
+        "features": "center_plus_prev_concat, rounded through float16, StandardScaler fit on the fit rows",
+        "head": "Linear(1024,256) -> ReLU -> Dropout(0.2) -> Linear(256,3)",
+        "optimizer": "Adam(lr=0.001, weight_decay=0.0)",
+        "batch_size": 128,
+        "max_epochs": 300,
+        "patience": 20,
+        "selection": "lowest validation loss",
+        "n_fit": 108000,
+        "n_val": 12000,
+        "seed": 0,
+        "best_epoch": 3,
+        "epochs_run": 23,
+        "best_val_loss": 0.12065,
+        "best_val_acc": 0.9594,
+        "train_seconds": 62.8,
+        "history": [
+          {
+            "epoch": 1,
+            "train_loss": 0.1745,
+            "val_loss": 0.12775,
+            "val_acc": 0.9545,
+            "elapsed_s": 2.78
+          },
+          {
+            "epoch": 2,
+            "train_loss": 0.11801,
+            "val_loss": 0.12174,
+            "val_acc": 0.9567,
+            "elapsed_s": 5.46
+          },
+          {
+            "epoch": 3,
+            "train_loss": 0.09937,
+            "val_loss": 0.12065,
+            "val_acc": 0.9594,
+            "elapsed_s": 8.18
+          },
+          {
+            "epoch": 4,
+            "train_loss": 0.08747,
+            "val_loss": 0.12564,
+            "val_acc": 0.9579,
+            "elapsed_s": 10.96
+          },
+          {
+            "epoch": 5,
+            "train_loss": 0.07694,
+            "val_loss": 0.1352,
+            "val_acc": 0.9588,
+            "elapsed_s": 13.62
+          },
+          {
+            "epoch": 6,
+            "train_loss": 0.06846,
+            "val_loss": 0.13194,
+            "val_acc": 0.96,
+            "elapsed_s": 16.31
+          },
+          {
+            "epoch": 7,
+            "train_loss": 0.06069,
+            "val_loss": 0.13295,
+            "val_acc": 0.9618,
+            "elapsed_s": 19.01
+          },
+          {
+            "epoch": 8,
+            "train_loss": 0.0544,
+            "val_loss": 0.14024,
+            "val_acc": 0.9613,
+            "elapsed_s": 21.73
+          },
+          {
+            "epoch": 9,
+            "train_loss": 0.04843,
+            "val_loss": 0.15513,
+            "val_acc": 0.9574,
+            "elapsed_s": 24.39
+          },
+          {
+            "epoch": 10,
+            "train_loss": 0.04276,
+            "val_loss": 0.15685,
+            "val_acc": 0.9603,
+            "elapsed_s": 27.07
+          },
+          {
+            "epoch": 11,
+            "train_loss": 0.03942,
+            "val_loss": 0.17547,
+            "val_acc": 0.9592,
+            "elapsed_s": 29.8
+          },
+          {
+            "epoch": 12,
+            "train_loss": 0.03936,
+            "val_loss": 0.17484,
+            "val_acc": 0.9575,
+            "elapsed_s": 32.54
+          },
+          {
+            "epoch": 13,
+            "train_loss": 0.035,
+            "val_loss": 0.1877,
+            "val_acc": 0.9587,
+            "elapsed_s": 35.21
+          },
+          {
+            "epoch": 14,
+            "train_loss": 0.03427,
+            "val_loss": 0.18584,
+            "val_acc": 0.959,
+            "elapsed_s": 37.91
+          },
+          {
+            "epoch": 15,
+            "train_loss": 0.03161,
+            "val_loss": 0.20299,
+            "val_acc": 0.9566,
+            "elapsed_s": 40.58
+          },
+          {
+            "epoch": 16,
+            "train_loss": 0.02956,
+            "val_loss": 0.19766,
+            "val_acc": 0.9594,
+            "elapsed_s": 43.33
+          },
+          {
+            "epoch": 17,
+            "train_loss": 0.0296,
+            "val_loss": 0.20354,
+            "val_acc": 0.9564,
+            "elapsed_s": 46.07
+          },
+          {
+            "epoch": 18,
+            "train_loss": 0.0265,
+            "val_loss": 0.21122,
+            "val_acc": 0.9584,
+            "elapsed_s": 48.82
+          },
+          {
+            "epoch": 19,
+            "train_loss": 0.02727,
+            "val_loss": 0.21826,
+            "val_acc": 0.9566,
+            "elapsed_s": 51.6
+          },
+          {
+            "epoch": 20,
+            "train_loss": 0.02382,
+            "val_loss": 0.21824,
+            "val_acc": 0.9559,
+            "elapsed_s": 54.37
+          },
+          {
+            "epoch": 21,
+            "train_loss": 0.02477,
+            "val_loss": 0.23559,
+            "val_acc": 0.9592,
+            "elapsed_s": 57.15
+          },
+          {
+            "epoch": 22,
+            "train_loss": 0.02501,
+            "val_loss": 0.2249,
+            "val_acc": 0.9568,
+            "elapsed_s": 59.94
+          },
+          {
+            "epoch": 23,
+            "train_loss": 0.02343,
+            "val_loss": 0.23432,
+            "val_acc": 0.9582,
+            "elapsed_s": 62.79
+          }
+        ]
+      },
+      "test": {
+        "macro_f1": 0.9564,
+        "accuracy": 0.9567,
+        "per_class": {
+          "none": {
+            "label": 0,
+            "precision": 0.9608,
+            "recall": 0.9107,
+            "f1": 0.9351,
+            "support": 6216
+          },
+          "acceptor": {
+            "label": 1,
+            "precision": 0.9463,
+            "recall": 0.9767,
+            "f1": 0.9612,
+            "support": 6220
+          },
+          "donor": {
+            "label": 2,
+            "precision": 0.9634,
+            "recall": 0.9826,
+            "f1": 0.9729,
+            "support": 6217
+          }
+        },
+        "confusion_matrix": {
+          "rows": "true label",
+          "cols": "predicted label",
+          "names": [
+            "none",
+            "acceptor",
+            "donor"
+          ],
+          "matrix": [
+            [
+              5661,
+              329,
+              226
+            ],
+            [
+              139,
+              6075,
+              6
+            ],
+            [
+              92,
+              16,
+              6109
+            ]
+          ]
+        },
+        "macro_f1_ci95": [
+          0.9537,
+          0.9592
+        ],
+        "accuracy_ci95": [
+          0.954,
+          0.9595
+        ],
+        "macro_f1_ci95_window_resampling": [
+          0.9536,
+          0.9594
+        ],
+        "negatives_called_none": {
+          "decoy_GT": {
+            "n": 1036,
+            "called_none": 0.8726,
+            "ci95": [
+              0.8517,
+              0.894
+            ]
+          },
+          "decoy_AG": {
+            "n": 1036,
+            "called_none": 0.8108,
+            "ci95": [
+              0.7874,
+              0.8346
+            ]
+          },
+          "exon_interior": {
+            "n": 2072,
+            "called_none": 0.9445,
+            "ci95": [
+              0.9349,
+              0.9543
+            ]
+          },
+          "intron_interior": {
+            "n": 2072,
+            "called_none": 0.9459,
+            "ci95": [
+              0.9357,
+              0.9561
+            ]
+          }
+        }
+      },
+      "seconds_total": 387.5
+    },
+    "nt_2500m": {
+      "name": "NT 2.5B",
+      "repo": "InstaDeepAI/nucleotide-transformer-2.5b-multi-species",
+      "revision": "b746b125aacd1b0970c05a32fd71ba726754542e",
+      "status": "ok",
+      "embedding": {
+        "precision": "fp16 weights + fp16 autocast",
+        "loaded_via": "AutoModel",
+        "parameters": 2537283201,
+        "hidden_size": 2560,
+        "feature_dim": 5120,
+        "max_tokens": 1000,
+        "load_seconds": 70.9,
+        "fp16_check": "not run: the weights are fp16, so there is no fp32 result to compare with",
+        "batch_size_final": 64,
+        "embed_seconds": 4222.6,
+        "embed_seconds_this_session": 4222.6,
+        "windows_this_session": 138653,
+        "sessions": 1,
+        "embed_ms_per_window": 30.45,
+        "peak_gpu_gb": 6.78,
+        "peak_gpu_reserved_gb": 7.19,
+        "failed_attempts": [],
+        "from_checkpoint": false,
+        "tokenise_seconds": 99.4
+      },
+      "centre_token": {
+        "windows_checked": 138653,
+        "distinct_placements": 1,
+        "most_common": [
+          {
+            "rows": 138653,
+            "share": 1.0,
+            "centre_input_index": 51,
+            "centre_bases": [
+              300,
+              305
+            ],
+            "previous_input_index": 50,
+            "previous_bases": [
+              294,
+              299
+            ]
+          }
+        ],
+        "tokenizer": "EsmTokenizer (slow: token lengths)",
+        "max_tokens": 1000,
+        "tokens_per_window": [
+          101,
+          101
+        ],
+        "tokenise_seconds": 99.4
+      },
+      "head_training": {
+        "features": "center_plus_prev_concat, rounded through float16, StandardScaler fit on the fit rows",
+        "head": "Linear(5120,256) -> ReLU -> Dropout(0.2) -> Linear(256,3)",
+        "optimizer": "Adam(lr=0.001, weight_decay=0.0)",
+        "batch_size": 128,
+        "max_epochs": 300,
+        "patience": 20,
+        "selection": "lowest validation loss",
+        "n_fit": 108000,
+        "n_val": 12000,
+        "seed": 0,
+        "best_epoch": 1,
+        "epochs_run": 21,
+        "best_val_loss": 0.04764,
+        "best_val_acc": 0.9826,
+        "train_seconds": 303.6,
+        "history": [
+          {
+            "epoch": 1,
+            "train_loss": 0.06397,
+            "val_loss": 0.04764,
+            "val_acc": 0.9826,
+            "elapsed_s": 7.28
+          },
+          {
+            "epoch": 2,
+            "train_loss": 0.03769,
+            "val_loss": 0.0484,
+            "val_acc": 0.9835,
+            "elapsed_s": 14.59
+          },
+          {
+            "epoch": 3,
+            "train_loss": 0.02706,
+            "val_loss": 0.05416,
+            "val_acc": 0.9853,
+            "elapsed_s": 21.8
+          },
+          {
+            "epoch": 4,
+            "train_loss": 0.02165,
+            "val_loss": 0.06996,
+            "val_acc": 0.9837,
+            "elapsed_s": 29.21
+          },
+          {
+            "epoch": 5,
+            "train_loss": 0.02007,
+            "val_loss": 0.07163,
+            "val_acc": 0.9849,
+            "elapsed_s": 38.11
+          },
+          {
+            "epoch": 6,
+            "train_loss": 0.01383,
+            "val_loss": 0.08521,
+            "val_acc": 0.9841,
+            "elapsed_s": 50.31
+          },
+          {
+            "epoch": 7,
+            "train_loss": 0.01434,
+            "val_loss": 0.0956,
+            "val_acc": 0.985,
+            "elapsed_s": 73.36
+          },
+          {
+            "epoch": 8,
+            "train_loss": 0.01341,
+            "val_loss": 0.11288,
+            "val_acc": 0.9841,
+            "elapsed_s": 101.01
+          },
+          {
+            "epoch": 9,
+            "train_loss": 0.01588,
+            "val_loss": 0.11081,
+            "val_acc": 0.9858,
+            "elapsed_s": 126.43
+          },
+          {
+            "epoch": 10,
+            "train_loss": 0.01286,
+            "val_loss": 0.11151,
+            "val_acc": 0.9852,
+            "elapsed_s": 148.89
+          },
+          {
+            "epoch": 11,
+            "train_loss": 0.01035,
+            "val_loss": 0.13897,
+            "val_acc": 0.9843,
+            "elapsed_s": 171.69
+          },
+          {
+            "epoch": 12,
+            "train_loss": 0.01051,
+            "val_loss": 0.13583,
+            "val_acc": 0.9847,
+            "elapsed_s": 188.95
+          },
+          {
+            "epoch": 13,
+            "train_loss": 0.01314,
+            "val_loss": 0.15829,
+            "val_acc": 0.9843,
+            "elapsed_s": 203.67
+          },
+          {
+            "epoch": 14,
+            "train_loss": 0.01331,
+            "val_loss": 0.14313,
+            "val_acc": 0.9858,
+            "elapsed_s": 217.44
+          },
+          {
+            "epoch": 15,
+            "train_loss": 0.01189,
+            "val_loss": 0.1513,
+            "val_acc": 0.9858,
+            "elapsed_s": 229.87
+          },
+          {
+            "epoch": 16,
+            "train_loss": 0.00643,
+            "val_loss": 0.14543,
+            "val_acc": 0.9861,
+            "elapsed_s": 242.2
+          },
+          {
+            "epoch": 17,
+            "train_loss": 0.00945,
+            "val_loss": 0.18547,
+            "val_acc": 0.9849,
+            "elapsed_s": 254.79
+          },
+          {
+            "epoch": 18,
+            "train_loss": 0.01179,
+            "val_loss": 0.18259,
+            "val_acc": 0.9858,
+            "elapsed_s": 267.54
+          },
+          {
+            "epoch": 19,
+            "train_loss": 0.0075,
+            "val_loss": 0.19739,
+            "val_acc": 0.9864,
+            "elapsed_s": 279.57
+          },
+          {
+            "epoch": 20,
+            "train_loss": 0.00887,
+            "val_loss": 0.21364,
+            "val_acc": 0.9858,
+            "elapsed_s": 291.44
+          },
+          {
+            "epoch": 21,
+            "train_loss": 0.01135,
+            "val_loss": 0.20423,
+            "val_acc": 0.9854,
+            "elapsed_s": 303.59
+          }
+        ]
+      },
+      "test": {
+        "macro_f1": 0.9787,
+        "accuracy": 0.9786,
+        "per_class": {
+          "none": {
+            "label": 0,
+            "precision": 0.9555,
+            "recall": 0.9818,
+            "f1": 0.9685,
+            "support": 6216
+          },
+          "acceptor": {
+            "label": 1,
+            "precision": 0.9944,
+            "recall": 0.9674,
+            "f1": 0.9807,
+            "support": 6220
+          },
+          "donor": {
+            "label": 2,
+            "precision": 0.987,
+            "recall": 0.9866,
+            "f1": 0.9868,
+            "support": 6217
+          }
+        },
+        "confusion_matrix": {
+          "rows": "true label",
+          "cols": "predicted label",
+          "names": [
+            "none",
+            "acceptor",
+            "donor"
+          ],
+          "matrix": [
+            [
+              6103,
+              32,
+              81
+            ],
+            [
+              203,
+              6017,
+              0
+            ],
+            [
+              81,
+              2,
+              6134
+            ]
+          ]
+        },
+        "macro_f1_ci95": [
+          0.9762,
+          0.981
+        ],
+        "accuracy_ci95": [
+          0.9762,
+          0.9809
+        ],
+        "macro_f1_ci95_window_resampling": [
+          0.9765,
+          0.9807
+        ],
+        "negatives_called_none": {
+          "decoy_GT": {
+            "n": 1036,
+            "called_none": 0.9479,
+            "ci95": [
+              0.9341,
+              0.9612
+            ]
+          },
+          "decoy_AG": {
+            "n": 1036,
+            "called_none": 0.9797,
+            "ci95": [
+              0.9705,
+              0.988
+            ]
+          },
+          "exon_interior": {
+            "n": 2072,
+            "called_none": 0.9899,
+            "ci95": [
+              0.9848,
+              0.9943
+            ]
+          },
+          "intron_interior": {
+            "n": 2072,
+            "called_none": 0.9918,
+            "ci95": [
+              0.9878,
+              0.9954
+            ]
+          }
+        }
+      },
+      "seconds_total": 4709.0
+    }
+  },
+  "total_seconds": 5097.6,
+  "challenger_minus_reference": {
+    "challenger": "nt_2500m",
+    "reference": "nt_v2_50m",
+    "macro_f1": {
+      "difference": 0.0223,
+      "ci95": [
+        0.0189,
+        0.0256
+      ],
+      "ci95_window_resampling": [
+        0.019,
+        0.0252
+      ]
+    },
+    "accuracy": {
+      "difference": 0.0219,
+      "ci95": [
+        0.0186,
+        0.0252
+      ]
+    },
+    "decoy_GT_called_none": {
+      "difference": 0.0753,
+      "ci95": [
+        0.0546,
+        0.0958
+      ]
+    },
+    "decoy_AG_called_none": {
+      "difference": 0.1689,
+      "ci95": [
+        0.1451,
+        0.1943
+      ]
+    },
+    "exon_interior_called_none": {
+      "difference": 0.0454,
+      "ci95": [
+        0.036,
+        0.055
+      ]
+    },
+    "intron_interior_called_none": {
+      "difference": 0.0459,
+      "ci95": [
+        0.0358,
+        0.056
+      ]
+    }
+  },
+  "reference_vs_laptop": {
+    "laptop": {
+      "macro_f1": 0.957,
+      "decoy_GT": 0.891,
+      "decoy_AG": 0.827
+    },
+    "source": "results/learning_curve/summary.md (120,000 windows, mean of 3 seeds)",
+    "here": {
+      "macro_f1": 0.9564,
+      "decoy_GT": 0.8726,
+      "decoy_AG": 0.8108
+    }
+  }
+}

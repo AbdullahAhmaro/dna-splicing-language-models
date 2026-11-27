@@ -29,6 +29,8 @@ Numbers are from `02_dna-splicing-pipeline/results/`.
 - **Hard negatives** (exon/intron interiors and GT/AG decoys from training chromosomes):
   acceptor top-k rose by +0.08 [+0.03, +0.13], and exonic false positives fell by a
   quarter to a third.
+- NT 2.5B on the genome dataset (120k train): macro-F1 0.979 vs 0.956 for NT-v2 50M,
+  +0.022 [+0.019, +0.026] (genes resampled). Beats NT-v2 50M trained on all 529k windows (0.966).
 - **Open:** which phase-2 direction to take (fine-tuning, longer context, per-position
   labels; see `03_for-meeting-2026-11-23/00_results_summary.pdf`). Also open: GPU-cluster
   access, and the proposal due date (the 8 Nov placeholder says "the 18th, confirm").
